@@ -79,7 +79,7 @@ Run the commands below to update the main.tf a bit:
 
 `egrep "\"hello from TF nginx\"$" main.tf || sed -i '/^  }/a\ upload {\n    content = "hello from TF nginx"\n    file = "/usr/share/nginx/html/index.html"\n  }' main.tf`{{execute}}
 
-`diff -W $(tput cols) --side-by-side --suppress-common-lines --color twistlock.cfg{.orig,}`{{execute}}
+`diff -W $(tput cols) --side-by-side twistlock.cfg{.orig,}`{{execute}}
 
 Should see a new section called "upload" was added to the config.
 
@@ -100,7 +100,7 @@ Visit this URL to view the default Nginx web page:
 
 - [Nginx index page](https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/)
 
-Should see an updated "hello from TF nginx" message on the page now.
+Should see an updated "hello from TF nginx" message on the page now (you may have to refresh the browser).
 
 
 ## Run Terraform apply yet again (no changes)
@@ -124,7 +124,7 @@ Without TF involved, manually kill the nginx container:
 
 `docker images`{{execute}}
 
-Should not show any nginx containers running but image is still present.
+Should not show any nginx containers running but the image is still present.
 
 
 ## Re-run Terraform apply (since container state change) and verify
