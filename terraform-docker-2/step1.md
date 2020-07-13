@@ -79,9 +79,9 @@ Run the commands below to update the main.tf a bit:
 
 `egrep "\"hello from TF nginx\"$" main.tf || sed -i '/^  }/a\ upload {\n    content = "hello from TF nginx"\n    file = "/usr/share/nginx/html/index.html"\n  }' main.tf`{{execute}}
 
-`cat main.tf`{{execute}}
+`diff -W $(tput cols) --side-by-side --suppress-common-lines --color twistlock.cfg{.orig,}`{{execute}}
 
-Should see a new section called "upload" in the config.
+Should see a new section called "upload" was added to the config.
 
 
 ## Run the Terraform plan and apply (using modified config)
