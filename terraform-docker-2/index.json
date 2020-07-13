@@ -1,6 +1,6 @@
 {
   "title": "Terraform Tutorial",
-  "description": "A 60 second Terraform tutorial with just the basics",
+  "description": "A Terraform tutorial using Docker - Part II",
   "time": 1,
   "icon": "fa-terraform",
   "details": {
@@ -11,7 +11,7 @@
     },
     "steps": [
       {
-        "title": "Terraform in 60 Seconds",
+        "title": "Terraform using Docker Part II",
         "text": "step1.md"
       }
     ],
