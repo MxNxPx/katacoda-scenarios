@@ -13,3 +13,18 @@ To add the visualise tab to your scenarios, include the following JSON snippet w
 "scope": "docker run --name=scope -d --net=host --pid=host --privileged -v /var/run/docker.sock:/var/run/docker.sock:rw weaveworks/scope:1.9.1 --probe.docker=true",
 "scopePort": 4040,
 </pre>
+
+
+## Generated Web Link
+
+Vote
+https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com
+
+Result
+https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com
+
+## Markdown 
+<pre>https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com</pre>
+
+<pre>https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com</pre>
+
