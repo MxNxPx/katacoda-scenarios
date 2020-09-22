@@ -11,11 +11,11 @@ wait_file() {
 
 # Wait at most 5 seconds for the server.log file to appear
 
-file=/tmp/background.done
+bgfile=/tmp/background.done
 
 echo "waiting for background script to complete..."
-wait_file "$fle" 300 || {
-  echo "background script completion file missing after waiting for $? seconds: '$fle'"
+wait_file "$bgfile" 300 || {
+  echo "background script completion file missing after waiting for $? seconds: '$bgfile'"
   exit 1
 }
 
