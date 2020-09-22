@@ -1,5 +1,24 @@
 #!/bin/bash
 
+wait_file() {
+  local file="$1"; shift
+  local wait_seconds="${1:-300}"; shift # 600 seconds as default timeout
+
+  until test $((wait_seconds--)) -eq 0 -o -e "$file" ; do sleep 1; done
+
+  ((++wait_seconds))
+}
+
+# Wait at most 5 seconds for the server.log file to appear
+
+file=/tmp/background.done
+
+echo "waiting for background script to complete..."
+wait_file "$fle" 300 || {
+  echo "background script completion file missing after waiting for $? seconds: '$fle'"
+  exit 1
+}
+
 which termdown
 which httpie
 git clone https://github.com/dockersamples/example-voting-app.git
