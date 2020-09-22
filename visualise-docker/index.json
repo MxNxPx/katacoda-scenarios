@@ -24,7 +24,7 @@
         "uilayout": "terminal-iframe"
     },
     "backend": {
-        "imageid": "ubuntu"
+        "imageid": "ubuntu",
         "port": "5001"
     }
 }
