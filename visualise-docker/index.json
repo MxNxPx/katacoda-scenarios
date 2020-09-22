@@ -21,9 +21,10 @@
         "hideintro": false,
         "hidefinish": true,
         "showvisualise": true,
-        "uilayout": "terminal-terminal"
+        "uilayout": "terminal-iframe"
     },
     "backend": {
         "imageid": "ubuntu"
+        "port": "5001"
     }
 }
