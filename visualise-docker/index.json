@@ -8,15 +8,20 @@
                 "title": "",
                 "text": "step1.md"
             }
-        ]
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "code": "foreground.sh",
+            "credits": ""
+        }
     },
     "files": [],
     "environment": {
-        "hideintro": true, "hidefinish": true,
-        
+        "hideintro": false,
+        "hidefinish": true,
         "showvisualise": true,
-        
-        "uilayout": "terminal"
+        "uilayout": "terminal-terminal"
     },
     "backend": {
         "imageid": "ubuntu"
