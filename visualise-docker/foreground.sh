@@ -13,6 +13,12 @@
 
 #which termdown
 #which httpie
+apt-get update
+apt-get install -y httpie stress
+pip install termdown
+curl -L https://k14s.io/install.sh | bash
+touch /tmp/background.done
+
 git clone https://github.com/dockersamples/example-voting-app.git
 cd example-voting-app/
 #docker-compose up -d
