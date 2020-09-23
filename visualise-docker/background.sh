@@ -9,6 +9,6 @@ fi
 
 echo "Everything ready... Finalise the deployment"
 
-/usr/local/bin/deploy.sh
+bash /usr/local/bin/deploy.sh
 
 echo "done" | sudo tee /root/katacoda-background-finished

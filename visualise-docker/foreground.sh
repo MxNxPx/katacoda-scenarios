@@ -1,4 +1,4 @@
-sleep 5; /usr/local/bin/wait.sh
+sleep 10; /usr/local/bin/wait.sh
 
 #bash /root/launch-tmux.sh
 
