@@ -4,6 +4,8 @@ The aim of integrating Scope is to help people understand what has been deployed
 
 To launch Scope, click the Tab.
 
+![Docker Logo](./assets/Moby-logo.png)
+
 ## Dynatrace oneagent Install
 In your Dynatrace SaaS trial environment get the hostname
 
