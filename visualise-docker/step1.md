@@ -4,9 +4,24 @@ The aim of integrating Scope is to help people understand what has been deployed
 
 To launch Scope, click the Tab.
 
+## Task
+
+Launch the application
+`cd /root/example-voting-app/ && docker-compose up -d`{{execute}}
+
+Submit some data to the application
+`for i in $(seq 1 100); do VAL=$(shuf -n 1 -e a b); echo "VOTING: $VAL"; http --ignore-stdin -h -f POST "localhost:5000" vote=$VAL; done`{{execute}}
+
+Modify the application environment variables
+`cd /root/example-voting-app/ && ytt -f docker-compose.yml -f /root/OVERLAY_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
+
+Restart the application
+`cd /root/example-voting-app/ && docker-compose down && sleep 5 && docker-compose up -d`{{execute}}
+
+
 ## Index.json
 
-To add the visualise tab to your scenarios, include the following JSON snippet within the environments node. This will automatically add the tab to the scenarios. When the tab is pressed, the command to launch the Scope container will run.
+To add the visualise tab to your scenarios, include the following JSON snippet within the environments node. This will automatically add the tab to the scenarios. When the tab is pressed, the command to launch the Scope container will ru
 
 <pre class="file">
 "showvisualise": true,
@@ -23,8 +38,11 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com
 Result
 https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com
 
-## Markdown 
+
+## Markdown
+
 <pre>https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com</pre>
 
 <pre>https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com</pre>
+
 

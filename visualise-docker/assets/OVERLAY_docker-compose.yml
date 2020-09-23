@@ -1,0 +1,34 @@
+#@ load("@ytt:overlay", "overlay")
+
+#@overlay/match by=overlay.all
+---
+services:
+  vote:
+    #@overlay/match missing_ok=True
+    environment:
+      #@overlay/match missing_ok=True
+      DT_CUSTOM_PROP: "component=frontend sdlc=dev"
+  result:
+    #@overlay/match missing_ok=True
+    environment:
+      #@overlay/match missing_ok=True
+      DT_CUSTOM_PROP: "component=frontend sdlc=dev"
+  worker:
+    #@overlay/match missing_ok=True
+    environment:
+      #@overlay/match missing_ok=True
+      DT_CUSTOM_PROP: "component=backend sdlc=dev"
+  redis:
+    #@overlay/match missing_ok=True
+    environment:
+      #@overlay/match missing_ok=True
+      DT_CUSTOM_PROP: "component=backend sdlc=dev"
+  db:
+    #@overlay/match missing_ok=True
+    environment:
+      #@overlay/match missing_ok=True
+      DT_CUSTOM_PROP: "component=backend sdlc=dev"
+    #@overlay/match missing_ok=True
+    ports:
+      #@overlay/match missing_ok=True
+      - "5432:5432"
