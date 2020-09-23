@@ -39,7 +39,7 @@ Launch the application
 
 Submit some data to the application (visit the "Dashboard" tab to see the results in real time) 
 
-`nohup for i in $(seq 1 100); do VAL=$(shuf -n 1 -e a b); echo "VOTING: $VAL"; http --ignore-stdin -h -f POST "localhost:5000" vote=$VAL; done &`{{execute}}
+`for i in $(seq 1 100); do VAL=$(shuf -n 1 -e a b); echo "VOTING: $VAL"; http --ignore-stdin -h -f POST "localhost:5000" vote=$VAL; done`{{execute}}
 
 Modify the application environment variables  
 
@@ -81,4 +81,6 @@ https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com
 
 <pre>https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com</pre>
 
+
+![Docker Logo](./assets/Moby-logo.png)
 
