@@ -32,5 +32,4 @@ fi
 tmux attach-session -t $SESSION:0
 EOF
 
-cd /root/
-touch hello-world
+echo "deploy complete"
