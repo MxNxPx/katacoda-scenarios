@@ -16,7 +16,8 @@
                 {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
                 {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
                 {"file": "launch-tmux.sh", "target": "/root/", "chmod": "+x"},
-                {"file": "OVERLAY_docker-compose.yml", "target": "/root/", "chmod": "+x"}
+                {"file": "vote.sh", "target": "/root/", "chmod": "+x"},
+                {"file": "OVERLAY_docker-compose.yml", "target": "/root/", "chmod": "+r"}
             ]
         }
     },

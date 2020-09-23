@@ -38,7 +38,7 @@ Launch the application
 
 Submit some data to the application (visit the "Dashboard" tab to see the results in real time) 
 
-`for i in $(seq 1 100); do VAL=$(shuf -n 1 -e a b); echo "VOTING: $VAL"; http --ignore-stdin -h -f POST "localhost:5000" vote=$VAL; done`{{execute}}
+`nohup /root/vote.sh &; echo`{{execute}}
 
 Modify the application environment variables  
 
@@ -50,7 +50,7 @@ Restart the application
 
 Create some cpu load 
 
-`nohup stress --cpu 2 --timeout 300 &`{{execute}}
+`nohup stress --cpu 2 --timeout 300 &; echo`{{execute}}
 
 
 
