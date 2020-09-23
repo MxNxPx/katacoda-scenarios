@@ -21,6 +21,8 @@ Download and install the oneagent
 `wget -O /tmp/Dynatrace-OneAgent-Linux.sh "https://${DYNATRACE_HOST}.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token ${DYNATRACE_OA_TOKEN}" && /bin/sh /tmp/Dynatrace-OneAgent-Linux.sh --set-app-log-content-access=true --set-infra-only=false`{{execute}}
 
 
+---
+
 
 ## Tasks
 
@@ -44,6 +46,8 @@ Create some cpu load
 
 `nohup stress --cpu 2 --timeout 300 </dev/null >nohup.out 2>nohup.err &`{{execute}}
 
+
+---
 
 
 ## Generated Web Link
