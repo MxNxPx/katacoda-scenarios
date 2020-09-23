@@ -21,7 +21,7 @@ then
     # Start New Session with our name
     tmux new-session -d -s $SESSION
     tmux selectp -t 0    # select the first (0) pane
-    tmux splitw -v -p 10 # split it into two halves
+    tmux splitw -v -p 20 # split it into two halves
     tmux send-keys 'termdown -b 55m -f standard -t "< 5   MINS   LEFT!"' C-m
 
     tmux selectp -t 0    # select the first (0) pane
