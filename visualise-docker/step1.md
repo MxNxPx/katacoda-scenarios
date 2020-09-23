@@ -6,12 +6,18 @@ To launch Scope, click the Tab.
 
 ## Dynatrace oneagent Install
 In your Dynatrace SaaS trial environment get the hostname
+
 Under: profile>account settings>environment management>settings>environment
+
 Copy this Dynatrace Host ID and store it
 
+
 In your Dynatrace SaaS trial environment get the installerDownload token
+
 Under: manage>deploy dynatrace>no access to host>set up paas integration>installerdownload>show token
+
 Copy this Dynatrace installerDownload token and store it
+
 
 Provide the DT info:
 
