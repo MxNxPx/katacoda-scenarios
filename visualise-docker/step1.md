@@ -14,9 +14,11 @@ Under: manage>deploy dynatrace>no access to host>set up paas integration>install
 Copy this Dynatrace installerDownload token and store it
 
 Provide the DT info:
+
 `clear && read -p "[*] Enter your Dynatrace Host ID: " DTHID && export DYNATRACE_HOST=$DTHID && read -p "[*] Enter your Dynatrace Token: " DTOT && export DYNATRACE_OA_TOKEN=$DTOT`{{execute}}
 
 Download and install the oneagent
+
 `wget -O /tmp/Dynatrace-OneAgent-Linux.sh "https://${DYNATRACE_HOST}.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token ${DYNATRACE_OA_TOKEN}" && /bin/sh /tmp/Dynatrace-OneAgent-Linux.sh --set-app-log-content-access=true --set-infra-only=false`{{execute}}
 
 
@@ -24,18 +26,23 @@ Download and install the oneagent
 ## Tasks
 
 Launch the application 
+
 `cd /root/example-voting-app/ && docker-compose up -d`{{execute}}
 
 Submit some data to the application (visit the "Dashboard" tab to see the results in real time) 
+
 `nohup for i in $(seq 1 100); do VAL=$(shuf -n 1 -e a b); echo "VOTING: $VAL"; http --ignore-stdin -h -f POST "localhost:5000" vote=$VAL; done &`{{execute}}
 
 Modify the application environment variables  
+
 `cd /root/example-voting-app/ && ytt -f docker-compose.yml -f /root/OVERLAY_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
 
 Restart the application 
+
 `cd /root/example-voting-app/ && docker-compose down && sleep 5 && docker-compose up -d`{{execute}}
 
 Create some cpu load 
+
 `nohup stress --cpu 2 --timeout 300 &`{{execute}}
 
 
