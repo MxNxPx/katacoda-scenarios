@@ -4,6 +4,23 @@ The aim of integrating Scope is to help people understand what has been deployed
 
 To launch Scope, click the Tab.
 
+## Dynatrace oneagent Install
+In your Dynatrace SaaS trial environment get the hostname
+Under: profile>account settings>environment management>settings>environment
+Copy this Dynatrace Host ID and store it
+
+In your Dynatrace SaaS trial environment get the installerDownload token
+Under: manage>deploy dynatrace>no access to host>set up paas integration>installerdownload>show token
+Copy this Dynatrace installerDownload token and store it
+
+Provide the DT info:
+`read -p "Dynatrace Host ID: " DTHID && export DYNATRACE_HOST=$DTHID && read -p "Dynatrace Token: " DTOT && export DYNATRACE_OA_TOKEN=$DTOT`{{execute}}
+
+Download and install the oneagent
+`wget -O /tmp/Dynatrace-OneAgent-Linux.sh "https://${DYNATRACE_HOST}.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token ${DYNATRACE_OA_TOKEN}" && /bin/sh /
+
+
+
 ## Tasks
 
 Launch the application 
@@ -20,21 +37,6 @@ Restart the application
 
 Create some cpu load 
 `nohup stress --cpu 2 --timeout 300 &`{{execute}}
-
-# Dynatrace oneagent Install
-In your Dynatrace SaaS trial environment get the hostname
-Under: profile>account settings>environment management>settings>environment
-Copy this Dynatrace Host ID and store it
-
-In your Dynatrace SaaS trial environment get the installerDownload token
-Under: manage>deploy dynatrace>no access to host>set up paas integration>installerdownload>show token
-Copy this Dynatrace installerDownload token and store it
-
-Provide the DT info:
-`read -p "Dynatrace Host ID: " DTHID && export DYNATRACE_HOST=$DTHID && read -p "Dynatrace Token: " DTOT && export DYNATRACE_OA_TOKEN=$DTOT`{{execute}}
-
-Download and install the oneagent
-`wget -O /tmp/Dynatrace-OneAgent-Linux.sh "https://${DYNATRACE_HOST}.live.dynatrace.com/api/v1/deployment/installer/agent/unix/default/latest?arch=x86&flavor=default" --header="Authorization: Api-Token ${DYNATRACE_OA_TOKEN}" && /bin/sh /tmp/Dynatrace-OneAgent-Linux.sh --set-app-log-content-access=true --set-infra-only=false`{{execute}}
 
 
 
