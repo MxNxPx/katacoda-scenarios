@@ -6,7 +6,9 @@ show_progress()
   local -r delay='0.75'
   local spinstr='\|/-'
   local temp
-  echo -n "Configuring Environment..."
+  clear
+  echo ""
+  echo -n "Configuring Environment (if this takes longer than 5 mins, start over)..."
   while true; do 
     sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
     if [[ "$?" -ne 0 ]]; then     
@@ -21,7 +23,9 @@ show_progress()
   done
   printf "    \b\b\b\b"
   echo ""
-  echo "Configured"
+  echo "Configured!"
+  echo "Launching tmux session..."
+  echo ""
 }
 
 show_progress
