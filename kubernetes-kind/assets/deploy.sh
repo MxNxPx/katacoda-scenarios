@@ -17,6 +17,6 @@ pip install termdown
 
 ## install kind and start cluster
 go get -u -v sigs.k8s.io/kind \
-&& kind create cluster --config /root/multipass-kind-2worker-ephemeral-config.yaml --image kindest/node:v1.16.3 --wait 5m && kubectl wait --timeout=5m --for=condition=Ready nodes --all
+&& kind create cluster --config /root/kind-2worker-ephemeral-config.yaml --image kindest/node:v1.16.3 --wait 5m && kubectl wait --timeout=5m --for=condition=Ready nodes --all
 
 echo "deploy complete"
