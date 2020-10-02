@@ -1,6 +1,3 @@
-Let's configure our `kubectl` to talk to that cluster:
-
-`export KUBECONFIG="$(kind get kubeconfig-path --name="kind")"`{{execute}}
 
 And, now, let's talk to our cluster: `kubectl get nodes`{{execute}}
 
