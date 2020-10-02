@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ## install deps
-## docker should already be installed on katacoda ubuntu image
-eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=stable bash)" \
-&& export PATH=$PATH:$HOME/go/bin
+## docker and go should already be installed on katacoda ubuntu image
+#eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=stable bash)" \
+#&& export PATH=$PATH:$HOME/go/bin
 
 ## packages (ex: kubectl httpie termdown)
 apt-get update \
