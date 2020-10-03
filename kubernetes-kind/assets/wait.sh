@@ -24,7 +24,6 @@ show_progress()
   printf "    \b\b\b\b"
   echo ""
   echo "Configured!"
-  echo "Launching tmux session..."
   echo ""
 }
 
