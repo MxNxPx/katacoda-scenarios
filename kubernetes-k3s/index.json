@@ -25,7 +25,7 @@
         "hidefinish": true,
         "showvisualise": false,
         "showdashboard": false,
-        "uilayout": "terminal"
+        "uilayout": "terminal-iframe"
     },
     "backend": {
         "imageid": "ubuntu",
