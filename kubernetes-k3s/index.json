@@ -5,26 +5,38 @@
     "details": {
         "steps": [
             {
-                "title": "",
+                "title": "Kubernetes Deployment",
                 "text": "step1.md",
                 "courseData": "background.sh",
                 "code": "foreground.sh"
+            },
+            {
+                "title": "Kubernetes Rollout Update",
+                "text": "step2.md"
             }
         ],
         "assets": {
             "host01": [
                 {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
                 {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "launch-tmux.sh", "target": "/root/", "chmod": "+x"}
+                {"file": "launch-tmux.sh", "target": "/usr/local/bin/", "chmod": "+x"}
             ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
         }
     },
     "files": [],
     "environment": {
-        "hideintro": true,
-        "hidefinish": true,
+        "hideintro": false,
+        "hidefinish": false,
         "showvisualise": false,
         "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
         "uilayout": "terminal-iframe"
     },
     "backend": {
