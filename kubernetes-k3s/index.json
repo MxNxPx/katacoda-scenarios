@@ -24,7 +24,7 @@
         "hideintro": true,
         "hidefinish": true,
         "showvisualise": false,
-        "showdashboard": false,
+        "showdashboard": true,
         "uilayout": "terminal-iframe"
     },
     "backend": {
