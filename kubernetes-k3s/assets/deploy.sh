@@ -15,6 +15,7 @@ apt-get update \
 #&& apt-get install -y kubectl httpie
 #&& apt-get install -y httpie
 
+pip install termdown
 
 ## install k3s and start cluster
 curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="v1.18" sh -
