@@ -14,6 +14,10 @@
                 "title": "Kubernetes Rollout Update",
                 "text": "step2.md",
                 "verify": "step2-verify.sh"
+            },
+            {
+                "title": "Quiz",
+                "text": "step3.md"
             }
         ],
         "assets": {
