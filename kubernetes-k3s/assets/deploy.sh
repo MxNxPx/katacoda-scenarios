@@ -18,13 +18,12 @@ apt-get update \
 
 ## install k3s and start cluster
 curl -sfL https://get.k3s.io | sh - \
-&& kubectl wait --for=condition=available --timeout=5m deployment/coredns -n kube-system \
-&& kubectl wait --for=condition=available --timeout=5m deployment/local-path-provisioner -n kube-system
+&& kubectl wait --for=condition=ready -n kube-system pod -l k8s-app=kube-dns \
+&& kubectl wait --for=condition=ready -n kube-system pod -l app=local-path-provisioner
 
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 cat <<'EOF' >/root/.bash_profile
-cat ~/.bash_profile
 prompt_command() {
   _PS1_expire=3540
   _PS1_now=$(expr `date +%s` - `stat -c %Y /tmp/d`)
