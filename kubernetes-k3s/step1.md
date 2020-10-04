@@ -14,7 +14,7 @@ Lets deploy something
 ```
 wget https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/deployment.yaml
 kubectl apply -f deployment.yaml
-kubectl wait --for=condition=available --timeout=5m deployment/nginx-deployment -n default
+kubectl rollout status deployment/nginx-deployment
 ```{{execute}}
 
 Port forward
