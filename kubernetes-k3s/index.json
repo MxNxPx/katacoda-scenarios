@@ -8,6 +8,7 @@
                 "title": "Kubernetes Deployment",
                 "text": "step1.md",
                 "verify": "step1-verify.sh",
+                "courseData": "background.sh",
                 "code": "foreground.sh"
             },
             {
@@ -29,7 +30,6 @@
         },
         "intro": {
             "text": "intro.md",
-            "courseData": "background.sh",
             "credits": ""
         },
         "finish": {
