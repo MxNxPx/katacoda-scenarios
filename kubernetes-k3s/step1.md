@@ -4,8 +4,11 @@ And, now, let's talk to our cluster: `kubectl get nodes`{{execute}}
 Awesome! We're rockin' and rollin'!
 
 **WARNING - YOU HAVE LESS THAN 1 HOUR BEFORE YOUR SESSION EXPIRES!**
+
 Note the time left (in HH:MM) for the session, it is in your prompt and updated after every command run:
+
 ![Terminal Time Remaining](./assets/term-expire.png)
+
 
 Lets deploy something
 ```
