@@ -23,7 +23,9 @@ kubectl rollout status -n kube-system deployment/coredns \
 
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
-cat <<'EOF' >/root/.bash_profile
+cat <<'EOF' >>/root/.bash_profile
+source ~/.bashrc
+
 prompt_command() {
   _PS1_expire=3540
   _PS1_now=$(expr `date +%s` - `stat -c %Y /tmp/d`)
