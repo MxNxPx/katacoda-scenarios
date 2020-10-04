@@ -1,22 +1,16 @@
 ## Example Quiz
 
----
+Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
 
->>Q1: What is the total number of nginx pods running<<
-( ) 1
-(*) 2
-( ) 4
+>>Q1: How many nginx pods are running?<< 
+=== 2
 
----
 
->>Q2: Enter the nginx deployment name <<
-=~= nginx-deployment
+>>Q2: What is the name of the nginx deployment?<< 
+=== nginx-deployment
 
----
 
->>Q3: Is the old replicaset still showing in the list of replicasets? <<
+>>Q3: Is the old nginx deployment replicaseet still showing in the list of replicasets? << 
 (*) Yes
-( ) No
-
----
+() No
 
