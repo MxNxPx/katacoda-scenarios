@@ -24,7 +24,7 @@ kubectl rollout status -n kube-system deployment/coredns \
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 cat <<'EOF' >>/root/.bash_profile
-source ~/.bashrc
+source /root/.bashrc
 
 prompt_command() {
   _PS1_expire=3540
@@ -41,6 +41,6 @@ prompt_command() {
 PROMPT_COMMAND='prompt_command'
 EOF
 
-echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'source <(kubectl completion bash)' >>/root/.bashrc
 
 echo "deploy complete"
