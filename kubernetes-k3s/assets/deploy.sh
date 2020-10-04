@@ -39,4 +39,6 @@ prompt_command() {
 PROMPT_COMMAND='prompt_command'
 EOF
 
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+
 echo "deploy complete"

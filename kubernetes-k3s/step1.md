@@ -13,7 +13,7 @@
 Lets deploy something
 ```
 curl -o /root/nginx-deploy.yaml https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/deployment.yaml
-kubectl apply -f nginx-deploy.yaml
+kubectl apply -f nginx-deploy.yaml --record
 kubectl rollout status deployment/nginx-deployment
 ```{{execute}}
 
