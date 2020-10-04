@@ -1,16 +1,24 @@
 {
     "noindex": true,
-    "title": "Kubernetes Playground using k3s",
-    "description": "Kubernetes Playground using k3s",
+    "title": "K8s using k3s",
+    "description": "K8s using k3s",
     "time": "10-20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Kubernetes Deployment",
+                "title": "Quiz 1 of 3",
                 "text": "step1.md",
-                "verify": "step1-verify.sh",
-                "code": "foreground.sh",
                 "answer": "step1-answers.md"
+            },
+            {
+                "title": "Quiz 2 of 3",
+                "text": "step2.md",
+                "answer": "step2-answers.md"
+            },
+            {
+                "title": "Quiz 3 of 3",
+                "text": "step3.md",
+                "answer": "step3-answers.md"
             }
         ],
         "assets": {
