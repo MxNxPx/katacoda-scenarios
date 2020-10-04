@@ -2,13 +2,15 @@
 
 ---
 
->>Q1: Enter the number of nginx pods running<<
-=== 2
+>>Q1: What is the total number of nginx pods running<<
+( ) 1
+(*) 2
+( ) 4
 
 ---
 
->>Q2: Enter the nginx version the deployment is running<<
-=~= 1.16.1
+>>Q2: Enter the nginx deployment name<<
+=~= nginx-deployment
 
 ---
 
