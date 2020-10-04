@@ -17,6 +17,7 @@ apt-get update \
 
 
 ## install k3s and start cluster
+export INSTALL_K3S_VERSION="1.18.9+k3s1"
 curl -sfL https://get.k3s.io | sh - \
 && kubectl rollout status -n kube-system deployment/coredns \
 && kubectl rollout status -n kube-system deployment/local-path-provisioner
