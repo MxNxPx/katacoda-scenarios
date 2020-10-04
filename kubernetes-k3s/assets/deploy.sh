@@ -18,8 +18,8 @@ apt-get update \
 
 ## install k3s and start cluster
 curl -sfL https://get.k3s.io | sh - \
-&& kubectl wait --for=condition=ready -n kube-system pod -l k8s-app=kube-dns \
-&& kubectl wait --for=condition=ready -n kube-system pod -l app=local-path-provisioner
+&& kubectl rollout status -n kube-system deployment/coredns \
+&& kubectl rollout status -n kube-system deployment/local-path-provisioner
 
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
