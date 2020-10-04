@@ -5,8 +5,9 @@ Awesome! We're rockin' and rollin'!
 
 Lets deploy something
 ```
-git clone https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/deployment.yaml
+wget https://raw.githubusercontent.com/kubernetes/website/master/content/en/examples/application/deployment.yaml
 kubectl apply -f deployment.yaml
+kubectl wait --for=condition=available --timeout=5m deployment/nginx-deployment -n default
 ```{{execute}}
 
 Port forward

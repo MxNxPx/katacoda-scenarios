@@ -18,7 +18,7 @@ apt-get update \
 
 ## install k3s and start cluster
 curl -sfL https://get.k3s.io | sh - \
-&& kubectl wait --for=condition=available --timeout=5m deployment/local-path-provisioner -n kube-system
+&& kubectl wait --for=condition=available --timeout=5m deployment/coredns -n kube-system
 
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
