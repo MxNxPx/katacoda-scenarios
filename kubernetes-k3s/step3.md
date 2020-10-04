@@ -9,12 +9,12 @@
 
 ---
 
->>Q2: Enter the nginx deployment name<<
+>>Q2: Enter the nginx deployment name <<
 =~= nginx-deployment
 
 ---
 
->>Q3: Is the old replicaset still showing in the list of replicasets?<<
+>>Q3: Is the old replicaset still showing in the list of replicasets? <<
 (*) Yes
 ( ) No
 
