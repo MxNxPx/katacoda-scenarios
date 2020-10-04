@@ -1,7 +1,6 @@
-## Example Quiz (1/3)
+## Example Quiz (3/3)
 
 Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
 
->>Q1: How many nginx pods are running?<< 
-=== 2
-
+>>Q3: What is the name of the nginx deployment?<< 
+=== nginx-deployment

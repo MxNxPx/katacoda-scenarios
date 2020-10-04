@@ -20,6 +20,16 @@
                 "title": "Quiz",
                 "text": "step3.md",
                 "answer": "step3-answers.md"
+            },
+            {
+                "title": "Quiz",
+                "text": "step4.md",
+                "answer": "step4-answers.md"
+            },
+            {
+                "title": "Quiz",
+                "text": "step5.md",
+                "answer": "step5-answers.md"
             }
         ],
         "assets": {
