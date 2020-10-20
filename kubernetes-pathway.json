@@ -4,16 +4,28 @@
     "icon": "fa-katacoda",
     "courses": [
       {
+        "title": "Visualise Environment Tab",
+        "description": "k3s k8s",
+        "pathway_id": "kubernetes",
+        "course_id": "kubernetes-k3s"
+      },
+      {
         "title": "Kubernetes using Katacoda k8s environment",
         "description": "katacoda k8s",
         "pathway_id": "kubernetes",
         "course_id": "kubernetes-cluster-running"
       },
       {
-        "title": "Visualise Environment Tab",
-        "description": "k3s k8s",
+        "title": "Kubernetes Playground",
+        "description": "k8s playground",
         "pathway_id": "kubernetes",
-        "course_id": "kubernetes-k3s"
+        "course_id": "playground"
+      },
+      {
+        "title": "Kubernetes quiz",
+        "description": "k8s quiz",
+        "pathway_id": "kubernetes",
+        "course_id": "quiz-test"
       }
     ]
   }
