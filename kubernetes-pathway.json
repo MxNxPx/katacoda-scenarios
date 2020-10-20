@@ -6,13 +6,13 @@
       {
         "title": "Kubernetes using Katacoda k8s environment",
         "description": "katacoda k8s",
-        "pathway_id": "k8s-scenarios",
+        "pathway_id": "kubernetes",
         "course_id": "kubernetes-cluster-running"
       },
       {
         "title": "Visualise Environment Tab",
         "description": "k3s k8s",
-        "pathway_id": "k8s-scenarios",
+        "pathway_id": "kubernetes",
         "course_id": "kubernetes-k3s"
       }
     ]
