@@ -1,0 +1,19 @@
+{
+    "title": "Katacoda Kubernetes Scenarios",
+    "description": "Testing a list of k8s scenarios presented in a particular order",
+    "icon": "fa-katacoda",
+    "courses": [
+      {
+        "title": "Kubernetes using Katacoda k8s environment",
+        "description": "katacoda k8s",
+        "pathway_id": "k8s-scenarios",
+        "course_id": "kubernetes-cluster-running"
+      },
+      {
+        "title": "Visualise Environment Tab",
+        "description": "k3s k8s",
+        "pathway_id": "k8s-scenarios",
+        "course_id": "kubernetes-k3s"
+      }
+    ]
+  }
