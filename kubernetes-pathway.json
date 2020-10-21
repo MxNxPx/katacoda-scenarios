@@ -1,7 +1,7 @@
 {
     "title": "Katacoda Kubernetes Scenarios",
     "description": "Testing a list of k8s scenarios presented in a particular order",
-    "icon": "fa-katacoda",
+    "icon": "fa-kubernetes",
     "courses": [
       {
         "title": "Visualise Environment Tab",
