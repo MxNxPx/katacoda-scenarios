@@ -1,0 +1,43 @@
+{
+  "title": "Sheep Enthusiast",
+  "description": "Docker fun",
+  "time": 1,
+  "icon": "fa-docker",
+  "details": {
+    "steps": [
+      {
+        "title": "See the output...",
+        "text": "step1.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "*.sh",
+          "target": "~/docker-demo"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Interactive Bash Terminal. A safe place to learn and execute commands version 0.1.\u001b[m\r\n",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": [
+      "./terraform/*"
+    ]
+  },
+  "backend": {
+    "imageid": "hashicorp-hashistack",
+    "showdashboard": false,
+    "dashboards": [
+      {
+        "name": "Nginx",
+        "port": 80
+      }
+    ]
+  }
+}
