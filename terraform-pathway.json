@@ -1,7 +1,7 @@
 {
     "title": "Katacoda Terraform Scenarios",
     "description": "Testing a list of TF scenarios presented in a particular order",
-    "icon": "fa-katacoda",
+    "icon": "fa-terraform",
     "courses": [
       {
         "title": "Terraform Tutorial PT 1",

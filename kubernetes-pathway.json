@@ -16,6 +16,12 @@
         "course_id": "kubernetes-cluster-running"
       },
       {
+        "title": "Kubernetes using kind",
+        "description": "katacoda kind",
+        "pathway_id": "kubernetes",
+        "course_id": "kubernetes-kind"
+      },
+      {
         "title": "Kubernetes Playground",
         "description": "k8s playground",
         "pathway_id": "kubernetes",
