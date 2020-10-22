@@ -4,5 +4,7 @@ Just follow the steps...
 
 `docker pull palassml/cond-cowsay:latest `{{execute}}
 
-`docker run -it palassml/cond-cowsay:latest sh -c 'COW=/usr/share/cowsay/cows/sodomized-sheep.cow && echo "Hi Kirk" |  cowsay -f ${COW}'`{{execute}}
+`docker run -it palassml/cond-cowsay:latest sh -c 'COW=/usr/share/cowsay/cows/sheep.cow && echo "Hi Kirk" |  cowsay -f ${COW}'`{{execute}}
+
+![cowsay toolF](cowsay.gif)
 
