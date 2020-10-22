@@ -6,5 +6,5 @@ Just follow the steps...
 
 `docker run -it palassml/cond-cowsay:latest sh -c 'COW=/usr/share/cowsay/cows/sheep.cow && echo "Hi Kirk" |  cowsay -f ${COW}'`{{execute}}
 
-![cowsay toolF](cowsay.gif)
+![cowsay toolF](https://raw.githubusercontent.com/MxNxPx/katacoda-scenarios/master/sheep-enthusiast/cowsay.gif)
 
