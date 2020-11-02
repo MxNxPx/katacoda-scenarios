@@ -13,6 +13,9 @@ cp -pfv ./example-voting-app/docker-compose.yml{,.orig}
 git clone https://github.com/Dynatrace/easyTravel-Docker.git
 cp -pfv ./easyTravel-Docker/docker-compose.yml{,.orig}
 
+cat <<'EOF' >>/root/.bash_profile
+source /root/.bashrc
+
 prompt_command() {
   _PS1_expire=3540
   _PS1_now=$(expr `date +%s` - `stat -c %Y /tmp/d`)
