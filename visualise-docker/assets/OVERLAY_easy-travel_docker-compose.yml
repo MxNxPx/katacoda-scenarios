@@ -1,4 +1,3 @@
-# cat easyTravel-Docker/OVERLAY_docker-compose.yml
 #@ load("@ytt:overlay", "overlay")
 
 #@overlay/match by=overlay.all
