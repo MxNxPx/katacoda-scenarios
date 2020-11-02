@@ -34,7 +34,7 @@ Launch the application
 
 Submit some data to the application (visit the "Dashboard" tab to see the results in real time) 
 
-`nohup /root/vote.sh </dev/null >nohup.out 2>nohup.err &`{{execute}}
+`nohup /usr/local/bin/vote.sh </dev/null >nohup.out 2>nohup.err &`{{execute}}
 
 Modify the application environment variables  
 
