@@ -13,4 +13,19 @@ cp -pfv ./example-voting-app/docker-compose.yml{,.orig}
 git clone https://github.com/Dynatrace/easyTravel-Docker.git
 cp -pfv ./easyTravel-Docker/docker-compose.yml{,.orig}
 
+prompt_command() {
+  _PS1_expire=3540
+  _PS1_now=$(expr `date +%s` - `stat -c %Y /tmp/d`)
+  if [ $(expr $_PS1_expire - $_PS1_now) -lt 300 ]; then
+    PS1=$( printf "\[\e[0;31m\]<5--MINS--LEFT! \W>\[\e[1;37m\] ")
+  else
+    PS1=$( printf "\[\e[0;32m\]%02d:%02d \W>\[\e[1;37m\] " \
+           $(( (( _PS1_expire - _PS1_now ) % 3600) / 60 )) \
+           $((  ( _PS1_expire - _PS1_now ) % 60))           \
+       )
+  fi
+}
+PROMPT_COMMAND='prompt_command'
+EOF
+
 echo "deploy complete"
