@@ -26,7 +26,7 @@ Download and install the oneagent
 ---
 
 
-## Tasks
+## Tasks (Voting App)
 
 Launch the application 
 
@@ -52,6 +52,20 @@ Create some cpu load
 ---
 
 
+## Tasks (Easy Travel App)
+
+Modify the application environment variables  
+
+`cd /root/easyTravel-Docker/ && ytt -f docker-compose.yml -f /root/OVERLAY_easy-travel_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
+
+Launch the application 
+
+`cd /root/easyTravel-Docker/ && docker-compose up -d`{{execute}}
+
+
+---
+
+
 ## Generated Web Link
 
 Vote
@@ -60,8 +74,10 @@ https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com
 Result
 https://[[HOST_SUBDOMAIN]]-5001-[[KATACODA_HOST]].environments.katacoda.com
 
+Easy Travel
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
 
 
-![Docker Logo](./assets/Moby-logo.png)
+
 

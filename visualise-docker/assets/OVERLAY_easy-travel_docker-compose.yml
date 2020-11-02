@@ -1,0 +1,38 @@
+# cat easyTravel-Docker/OVERLAY_docker-compose.yml
+#@ load("@ytt:overlay", "overlay")
+
+#@overlay/match by=overlay.all
+---
+mongodb:
+  #@overlay/match missing_ok=True
+  environment:
+    #@overlay/match missing_ok=True
+    DT_CUSTOM_PROP: "component=backend sdlc=dev"
+  #@overlay/replace
+  ports:
+  - "27017:27017"
+  - "28017:28017"
+
+backend:
+  #@overlay/match missing_ok=True
+  environment:
+    #@overlay/match missing_ok=True
+    DT_CUSTOM_PROP: "component=backend sdlc=dev"
+
+frontend:
+  #@overlay/match missing_ok=True
+  environment:
+    #@overlay/match missing_ok=True
+    DT_CUSTOM_PROP: "component=frontend sdlc=dev"
+
+www:
+  #@overlay/match missing_ok=True
+  environment:
+    #@overlay/match missing_ok=True
+    DT_CUSTOM_PROP: "component=frontend sdlc=dev"
+
+loadgen:
+  #@overlay/match missing_ok=True
+  environment:
+    #@overlay/match missing_ok=True
+    DT_CUSTOM_PROP: "component=loadgen sdlc=dev"
