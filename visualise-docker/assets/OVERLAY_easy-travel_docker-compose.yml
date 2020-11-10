@@ -35,3 +35,7 @@ loadgen:
   environment:
     #@overlay/match missing_ok=True
     DT_CUSTOM_PROP: "component=loadgen sdlc=dev"
+    #@overlay/match missing_ok=True
+    ET_PROBLEMS_DELAY: 300
+    #@overlay/match missing_ok=True
+    ET_PROBLEMS: "LoginProblems,LoginProblems,LoginProblems,LoginProblems"
