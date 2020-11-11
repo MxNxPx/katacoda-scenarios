@@ -68,7 +68,7 @@ Modify to change the issue
 
 Restart the application 
 
-`cd /root/easyTravel-Docker/ && docker-compose up -d`{{execute}}
+`cd /root/easyTravel-Docker/ && docker-compose down && docker-compose up -d`{{execute}}
 
 
 ---
