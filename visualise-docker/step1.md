@@ -54,11 +54,19 @@ Create some cpu load
 
 ## Tasks (Easy Travel App)
 
-Modify the application environment variables  
+Modify the application environment variables and add an issue  
 
-`cd /root/easyTravel-Docker/ && ytt -f docker-compose.yml -f /root/OVERLAY_easy-travel_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
+`cd /root/easyTravel-Docker/ && ytt -f docker-compose.yml -f /root/OVERLAY_easy-travel-issue01_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
 
 Launch the application 
+
+`cd /root/easyTravel-Docker/ && docker-compose up -d`{{execute}}
+
+Modify to change the issue
+
+`cd /root/easyTravel-Docker/ && ytt -f docker-compose.yml -f /root/OVERLAY_easy-travel-issue02_docker-compose.yml > docker-compose.yml.NEW && mv -fv docker-compose.yml{.NEW,}`{{execute}}
+
+Restart the application 
 
 `cd /root/easyTravel-Docker/ && docker-compose up -d`{{execute}}
 
