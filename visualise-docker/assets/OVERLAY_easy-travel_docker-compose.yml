@@ -38,4 +38,6 @@ loadgen:
     #@overlay/match missing_ok=True
     ET_PROBLEMS_DELAY: 300
     #@overlay/match missing_ok=True
+    ET_VISIT_NUMBER: 15
+    #@overlay/match missing_ok=True
     ET_PROBLEMS: "LoginProblems,LoginProblems,LoginProblems,LoginProblems"
