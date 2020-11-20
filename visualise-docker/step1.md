@@ -2,16 +2,23 @@
 ## Dynatrace oneagent Install
 In your Dynatrace SaaS trial environment get the hostname
 
->Under: profile>account settings>environment management>settings>environment
+>Under: manage>deploy dynatrace>no access to host>set up paas integration
 
->Copy this Dynatrace Host ID and store it
+>Copy this Dynatrace Environment ID and store it
 
 
 In your Dynatrace SaaS trial environment get the installerDownload token
 
->Under: manage>deploy dynatrace>no access to host>set up paas integration>installerdownload>show token
+>Under: manage>deploy dynatrace>no access to host>set up paas integration
+>Look for token name: katacodaToken
 
->Copy this Dynatrace installerDownload token and store it
+>If it exists, click "Show token"
+
+>If it doesn't exist, click "Generate new token"
+>Enter token name: katacodaToken
+>Click "Generate"
+
+>Copy this Dynatrace katacodatToken token and store it
 
 
 Provide the DT info:
