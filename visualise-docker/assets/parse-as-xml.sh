@@ -1,11 +1,13 @@
 #!/bin/bash
 
+
 ## set variables
+dir=/root
 threshold=${1:-4000}  #threshold for report time to be considered as long running
-file=AS-ild-reporting-response.xml  #AS utility output xml file
+file=$dir/AS-ild-reporting-response.xml  #AS utility output xml file
 backupfile="${file}.bak.$(date +"%Y-%m-%d_%H-%M")"  #where to store a backup of the file
 backupfilelimit=5
-output=output-parse-as.log
+output=$dir/output-parse-as.log
 sizelimit=104857600  #100mb in bytes (100 x 1024 x 1024)
 
 ## rotate log if over size limit
@@ -14,9 +16,9 @@ sizeoutput=$(stat -c '%s' $output)
 if [[ $sizeoutput -gt $sizelimit ]]; then
   gzip -f $output
 fi
-if [[ $(ls -A1t *.xml.bak.*gz 2>/dev/null | wc -l) -gt $backupfilelimit ]]; then
-  ls -A1t *xml.bak.*gz | tail -n $backupfilelimit | xargs rm
-fi 
+if [[ $(ls -A1t $dir/*.xml.bak.*gz 2>/dev/null | wc -l) -gt $backupfilelimit ]]; then
+  ls -A1rt $dir/*xml.bak.*gz | sed -e '1,'"${backupfilelimit}"'d' | xargs rm
+fi
 
 ## AS utility invocation here
 cp -f "${file}.orig" $file
