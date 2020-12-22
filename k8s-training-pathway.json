@@ -1,0 +1,37 @@
+{
+    "title": "Kubernetes Introductory Training",
+    "description": "Kubernetes Training for Beginners",
+    "icon": "fa-kubernetes",
+    "courses": [
+      {
+        "course_id": "k8s-101",
+        "title": "Kubernetes-101 Quiz",
+        "description": "Kubernetes Components"
+      },
+      {
+        "course_id": "k8s-102",
+        "title": "Kubernetes 102: Creating and Applying the YML file",
+        "description": "Creating and Applying the YML file"
+      },
+      {
+        "course_id": "k8s-103",
+        "title": "Kubernetes 103: Kubernetes Services",
+        "description": "Kubernetes Services"
+      },
+      {
+        "course_id": "k8s-104",
+        "title": "Kubernetes-104: Creating, Referencing, and Editing a ConfigMap",
+        "description": "Creating, Referencing, and Editing a ConfigMap "
+      },
+      {
+        "course_id": "k8s-105",
+        "title": "Kubernetes 105: Creating and Referencing Secrets",
+        "description": "Creating and Referencing Secrets"
+      },
+      {
+        "course_id": "k8s-201",
+        "title": "Kubernetes-201 Quiz",
+        "description": "Intro to Containers, Docker and Kurbernetes Quiz"
+      }
+    ]
+  }

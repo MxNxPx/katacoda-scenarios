@@ -1,0 +1,50 @@
+{
+    "noindex": true,
+    "title": "Kubernetes 105: Creating and Referencing Secrets ",
+    "description": "Creating and Referencing Secrets",
+    "time": "10-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Creating Secrets",
+                "text": "K8 105 Section 2.md",
+                "code": "foreground.sh"
+            },
+            {
+                "title": "Referencing Secrets",
+                "text": "K8 105 Section 3.md"
+            },
+            {
+                "title": "Test Logging in to Tomcat Manager UI",
+                "text": "K8 105 Section 4.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+                {"file": "*.yml", "target": "/root", "chmod": "+r"}
+            ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "hideintro": false,
+        "hidefinish": false,
+        "showvisualise": false,
+        "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "uilayout": "terminal-iframe"
+    },
+    "backend": {
+        "imageid": "ubuntu",
+        "port": "8080"
+    }
+}

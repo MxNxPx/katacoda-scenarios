@@ -1,0 +1,46 @@
+{
+    "noindex": true,
+    "title": "Kubernetes 103: Kubernetes Services",
+    "description": "Kubernetes Services",
+    "time": "10-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Kubernetes Services",
+                "text": "K8 103 Section 1.md",
+                "code": "foreground.sh"
+            },
+            {
+                "title": "Accessing a Service",
+                "text": "K8 103 Section 2.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+                {"file": "*.yml", "target": "/root", "chmod": "+r"}
+            ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "hideintro": false,
+        "hidefinish": false,
+        "showvisualise": false,
+        "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "uilayout": "terminal-iframe"
+    },
+    "backend": {
+        "imageid": "ubuntu",
+        "port": "8080"
+    }
+}

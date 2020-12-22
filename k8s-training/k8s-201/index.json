@@ -1,0 +1,87 @@
+{
+    "noindex": true,
+    "title": "Kubernetes 201 Quiz",
+    "description": "Intro to Containers, Docker and Kurbernetes Quiz",
+    "time": "15-25 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Section 1: Introduction to Containers",
+                "text": "step1.md",
+                "answer": "step1-answers.md"
+            },
+            {
+                "title": "Section 1: Introduction to Containers",
+                "text": "step2.md",
+                "answer": "step2-answers.md"
+            },
+            {
+                "title": "Section 1: Introduction to Containers",
+                "text": "step3.md",
+                "answer": "step3-answers.md"
+            },
+            {
+                "title": "Section 1: Introduction to Containers",
+                "text": "step4.md",
+                "answer": "step4-answers.md"
+            },
+            {
+                "title": "Section 1: Introduction to Containers",
+                "text": "step5.md",
+                "answer": "step5-answers.md"
+            },
+            {
+                "title": "Section 2: Docker and Kubernetes",
+                "text": "step1-2.md",
+                "answer": "step1-2-answers.md"
+            },
+            {
+                "title": "Section 2: Docker and Kubernetes",
+                "text": "step2-2.md",
+                "answer": "step2-2-answers.md"
+            },
+            {
+                "title": "Section 2: Docker and Kubernetes",
+                "text": "step3-2.md",
+                "answer": "step3-2-answers.md"
+            },
+            {
+                "title": "Section 2: Docker and Kubernetes",
+                "text": "step4-2.md",
+                "answer": "step4-2-answers.md"
+            },
+            {
+                "title": "Section 2: Docker and Kubernetes",
+                "text": "step5-2.md",
+                "answer": "step5-2-answers.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+                {"file": "*.yml", "target": "/root", "chmod": "+r"}
+            ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "hideintro": false,
+        "hidefinish": false,
+        "showvisualise": false,
+        "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "uilayout": "terminal-iframe"
+    },
+    "backend": {
+        "imageid": "ubuntu",
+        "port": "8080"
+    }
+}

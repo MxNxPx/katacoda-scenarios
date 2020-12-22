@@ -1,0 +1,48 @@
+{
+    "noindex": true,
+    "title": "Kubernetes 102: Creating and Applying the YML file",
+    "description": "Kubernetes: Creating and Applying the YML file",
+    "time": "10-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Creating the YML File",
+                "text": "K8 102 Section 3.md",
+                "code": "foreground.sh"
+            },
+            {
+                "title": "Applying the YML File",
+                "text": "K8 102 Section 4.md"
+            }
+        ],
+        "assets": {
+            "host01": [
+                {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+                {"file": "*.yml", "target": "/root", "chmod": "+r"},
+                {"file": "deploy.yml", "target": "/root/", "chmod": "+r"},
+                {"file": "service.yml", "target": "/root/", "chmod": "+r"}
+            ]
+        },
+        "intro": {
+            "text": "intro.md",
+            "courseData": "background.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "files": [],
+    "environment": {
+        "hideintro": false,
+        "hidefinish": false,
+        "showvisualise": false,
+        "showdashboard": true,
+        "uimessage1": "\u001b[32mYour Interactive Hands On Lab Terminal\u001b[m\r\n",
+        "uilayout": "terminal-iframe"
+    },
+    "backend": {
+        "imageid": "ubuntu",
+        "port": "8080"
+    }
+}

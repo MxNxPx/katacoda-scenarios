@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-web-o719580
+  namespace: sandbox
+  labels:
+    user: o719580
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      user: o719580
+  template:
+    metadata:
+      labels:
+        user: o719580
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        volumeMounts: # where we are going to store the contents of the
+#configmap
+        - name: index-html # the name of the volume declared below
+          mountPath: /usr/share/nginx/html/ # where to mount on the nginx
+#pod (default location of the index.html file)
+        ports:
+        - containerPort: 80
+      volumes:
+        - name: index-html
+          configMap:
+            name: nginx-index-o719580 # the name of the configmap we are 
+#referencing
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-service-o719580
+  namespace: sandbox
+  labels:
+    user: o719580
+spec:
+  selector:
+    user: o719580
+  ports:
+  - port: 80
+    protocol: TCP
