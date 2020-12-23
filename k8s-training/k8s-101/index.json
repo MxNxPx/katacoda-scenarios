@@ -8,7 +8,8 @@
             {
                 "title": "Section 1: Kubernetes Components",
                 "text": "step1.md",
-                "answer": "step1-answers.md"
+                "answer": "step1-answers.md",
+                "code": "foreground.sh"
             },
             {
                 "title": "Section 1: Kubernetes Components",
