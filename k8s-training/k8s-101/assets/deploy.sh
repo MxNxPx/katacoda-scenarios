@@ -17,12 +17,15 @@ apt-get update \
 
 pip install termdown
 
-## install k3s and start cluster
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="v1.18" sh -
-kubectl rollout status -n kube-system deployment/coredns \
-&& kubectl rollout status -n kube-system deployment/local-path-provisioner
+### install k3s and start cluster
+#curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="v1.18" sh -
+#kubectl rollout status -n kube-system deployment/coredns \
+#&& kubectl rollout status -n kube-system deployment/local-path-provisioner
 
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+## install kind
+GO111MODULE="on" go get sigs.k8s.io/kind@v0.9.0 && kind create cluster
+
+#export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 cat <<'EOF' >>/root/.bash_profile
 source /root/.bashrc
