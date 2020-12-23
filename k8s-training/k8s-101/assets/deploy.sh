@@ -23,6 +23,8 @@ apt-get update \
 
 ## install kind
 GO111MODULE="on" go get sigs.k8s.io/kind@v0.9.0 && kind create cluster --config /root/kind-config.yaml
+kubectl rollout status -n kube-system deployment/coredns \
+&& kubectl rollout status -n kube-system pod/kube-apiserver-kind-control-plane
 
 cat <<'EOF' >>/root/.bash_profile
 source /root/.bashrc
