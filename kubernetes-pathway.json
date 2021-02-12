@@ -4,6 +4,12 @@
     "icon": "fa-kubernetes",
     "courses": [
       {
+        "title": "Kubethanos using KinD",
+        "description": "kubethanos using kind",
+        "pathway_id": "kubernetes",
+        "course_id": "kubethanos-kind"
+      },
+      {
         "title": "Visualise Environment Tab",
         "description": "k3s k8s",
         "pathway_id": "kubernetes",
