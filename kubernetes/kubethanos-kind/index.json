@@ -15,7 +15,7 @@
             "host01": [
                 {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
                 {"file": "deploy.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "launch-tmux.sh", "target": "/root/", "chmod": "+x"}
+                {"file": "thanos.cow", "target": "/root/", "chmod": "+x"}
             ]
         }
     },
