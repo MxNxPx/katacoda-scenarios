@@ -15,11 +15,10 @@ apt-get update \
 
 
 ## install kind
-go get -u -v sigs.k8s.io/kind \
+go get -u -v sigs.k8s.io/kind
 #&& kind create cluster --config /root/kind-2worker-ephemeral-config.yaml --image kindest/node:v1.16.15 --wait 5m && kubectl wait --timeout=5m --for=condition=Ready nodes --all
 
 cat <<'EOF' >/root/.bash_profile
-cat ~/.bash_profile
 prompt_command() {
   _PS1_expire=3540
   _PS1_now=$(expr `date +%s` - `stat -c %Y /tmp/d`)
