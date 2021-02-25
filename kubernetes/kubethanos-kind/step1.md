@@ -6,3 +6,4 @@ Clone kubethanos repo
 Launch the demo
 
 `cd $HOME/kind-kubethanos && bash kind-kubethanos-demo.sh`{{execute}}
+(hit Enter to start, and after each pause to continue)
