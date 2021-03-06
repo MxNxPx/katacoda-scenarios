@@ -38,18 +38,18 @@ Let's install a kubectl plugin manager called krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 ```{{execute}}
 
-> Installed plugin: krew
+> _"Installed plugin: krew"_
 
 
 Let's install some kubectl plugins
 
 `kubectl krew install whoami ctx ns`{{execute}}
 
-> “namespace/sandbox created”
+> _“namespace/sandbox created”_
 
 
 Run a kubectl command using one of the plugins
 
 `kubectl krew whoami;echo`{{execute}}
 
-> kubecfg:basicauth:admin
+> _"kubecfg:basicauth:admin"_
