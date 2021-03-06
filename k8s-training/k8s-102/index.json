@@ -8,7 +8,7 @@
             {
                 "title": "Kubernetes CLI",
                 "text": "step1.md",
-                "code": "deploy.sh"
+                "code": "foreground.sh"
             },
             {
                 "title": "Namespaces",
