@@ -6,21 +6,23 @@
     "details": {
         "steps": [
             {
-                "title": "Creating the YML File",
-                "text": "K8 102 Section 3.md",
-                "code": "foreground.sh"
+                "title": "Kubernetes CLI",
+                "text": "step1.md",
+                "code": "deploy.sh"
+            },
+            {
+                "title": "Namespaces",
+                "text": "step2.md"
             },
             {
                 "title": "Applying the YML File",
-                "text": "K8 102 Section 4.md"
+                "text": "step3.md"
             }
         ],
         "assets": {
             "host01": [
                 {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "*.yml", "target": "/root", "chmod": "+r"},
-                {"file": "deploy.yml", "target": "/root/", "chmod": "+r"},
-                {"file": "service.yml", "target": "/root/", "chmod": "+r"}
+                {"file": "*.yaml", "target": "/root", "chmod": "+r"}
             ]
         },
         "intro": {

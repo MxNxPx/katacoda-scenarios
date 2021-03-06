@@ -22,10 +22,10 @@ Step 1:
 
 ## Pushing a Deployment 
 
-Now, we must apply the deployment.yml file
+Now, we must apply the deployment.yaml file
 
 Step 2:
-`kubectl apply -f deployment.yml
+`kubectl apply -f deployment.yaml
 `{{execute}}
 
 deployment.apps/a123456-deployment created
