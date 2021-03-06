@@ -6,20 +6,20 @@
     "details": {
         "steps": [
             {
-                "title": "Intro"",
+                "title": "Kubernetes 102",
                 "text": "step1.md",
                 "code": "foreground.sh"
             },
             {
-                "title": "Kubernetes CLI",
+                "title": "Kubernetes 102",
                 "text": "step2.md"
             },
             {
-                "title": "Namespaces",
+                "title": "Kubernetes 102",
                 "text": "step3.md"
             },
             {
-                "title": "Applying the YML File",
+                "title": "Kubernetes 102",
                 "text": "step4.md"
             }
         ],

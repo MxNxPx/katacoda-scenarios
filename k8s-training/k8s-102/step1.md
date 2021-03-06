@@ -1,4 +1,4 @@
-## Kubernetes 102
+## Kubernetes Lab Intro
 
 ---
 
