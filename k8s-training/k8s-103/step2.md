@@ -15,7 +15,7 @@ There are several different types of services in Kubernetes.  The default one, a
 
 Let's review the file called hello-web-deploy.yaml.
 
-`cat hello-web-deploy.yaml`{{execute}}
+`cat hello-web-deploy.yaml; echo;echo`{{execute}}
 
 
 Now apply it to the cluster and wait for it to be ready.
@@ -51,8 +51,8 @@ Lastly, run the below command to list deployments, services, pods, and endpoints
 
 ---
 
-## Notes
+## Note
 
 Observe that the service endpoints map to the running Pod IPs and the desired service port.
 
-Also, we did not specify a 'Type' for our Service in the yaml file.  Kubernetes automatically defaults to assigning it a Type of 'ClusterIP' and gave it a cluster internal IP address over the port that we declared.  An important detail to know about the Service Type ClusterIP, is that the Service will NOT be addressable directly from outside the cluster.
+Also, we did not specify a 'Type' for our Service in the yaml file.  Kubernetes automatically defaults to assigning it a Type of 'ClusterIP' and gave it a cluster internal IP address over the port that we declared.  

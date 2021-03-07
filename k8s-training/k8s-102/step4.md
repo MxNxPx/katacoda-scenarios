@@ -47,6 +47,10 @@ Notice that there is something called a **ReplicaSet**. Under the hood, a Deploy
 
 ## Kubernetes Logs
 
+Before checking the logs, we will confirm that the Deployment is healthy.
+
+`kubectl -n default wait deploy/a123456-hello --for=condition=available --timeout=120s`{{execute}}
+
 You can use the kubectl logs command to view stdout (standard output) and stderr (standard error - error messages or diagnostics) from Pods.
 
 `kubectl -n default logs deployment/a123456-deployment --tail=10`{{execute}}
