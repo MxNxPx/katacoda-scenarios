@@ -48,7 +48,7 @@ CTRL+c to stop watching the progress
 Lastly, run the command again and see what happens. After a few moments (allow up to 5 minutes), all Pods tied to the Deployment will be deleted.
 
 
-`kubectl get all -l user=a123456{{execute}}
+`kubectl get all -l user=a123456`{{execute}}
 
 > _"No resources found"_
 
