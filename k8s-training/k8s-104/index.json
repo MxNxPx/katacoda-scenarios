@@ -1,18 +1,22 @@
 {
     "noindex": true,
-    "title": "Kubernetes 104: Creating, Referencing, and Editing a ConfigMap",
+    "title": "Kubernetes 104",
     "description": "Creating, Referencing, and Editing a ConfigMap",
     "time": "10-20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Creating and Referencing a ConfigMap",
-                "text": "K8 104 Section 2.md",
+                "title": "Step 1",
+                "text": "step1.md",
                 "code": "foreground.sh"
             },
             {
-                "title": "Editing a ConfigMap",
-                "text": "K8 104 Section 3.md"
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
             }
         ],
         "assets": {
