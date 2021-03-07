@@ -12,30 +12,27 @@ That means that if a Pod dies that is part of a Deployment, Kubernetes will stan
 
 YAML files are very particular about spacing. Always use the spaces to indent and never use tabs.
 
-`cat deployment.yaml`{{execute}}
+Review the contents of the file deployment.yaml, which we will be using here in the next step.
+
+`cat deployment.yaml; echo;echo`{{execute}}
 
 ---
 
 ## Pushing a Deployment 
 
-Now, we let's apply the deployment.yaml file
+Now, we let's apply the deployment.yaml file.
 
 `kubectl apply -f deployment.yaml`{{execute}}
 
 > _"deployment.apps/a123456-deployment created"_
 
 
-To ensure that the deployment was created, run the command below.
-
-`kubectl get deployments`{{execute}}
-
-
-Let's now check the status of the deployment and pods with the command below. 
+Let's check the status of the deployment and pods with the command below. 
 
 `kubectl get all -l user=a123456`{{execute}}
 
+_NOTE: In our example we are using a label 'user=a123456' (defined in our yaml) to get all resources associated with the deployment_
 
-NOTE: In our example we are using a label 'user=a123456' (defined in our yaml) to get all resources associated with the deployment
 
 ---
 
