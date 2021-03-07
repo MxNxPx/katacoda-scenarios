@@ -47,6 +47,7 @@ Port Forward the nginx Pod to localhost:80
 
 Navigate to the **Dashboard** tab, to the right of the terminal tab and enter "8080" as the port number. Then select "Display Port" and a "Welcome to nginx" screen should appear. Note that if you delete your Podthen you will have to re-run the kubectl port-forward command to use the Dashboard.
 
+Instead of the **Dashboard** tab you could also navigate to this page:
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 
