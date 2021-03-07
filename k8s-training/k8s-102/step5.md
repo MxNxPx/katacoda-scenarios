@@ -17,16 +17,16 @@ Deleting a pod will take some time to delete, so please be patient.
 
 ---
 
-Now let's see everything created under the label "user=a123456". 
+Now let's see re-list all resources that have the label "user=a123456". 
 
 `kubectl get all -l user=a123456`{{execute}}
 
 
-Notice that the new pod name is different from the one deleted, this is because Kubernetes didn't resurrect the old pod but stood up a new replacement pod.
+Notice that the new pod name is different from the one deleted.  This is because Kubernetes didn't resurrect the old pod but instead stood up a new replacement pod.
 
 ---
 
-Now let's try deleting the deployment (allow up to 5 minutes). 
+Now let's delete the deployment (allow up to 5 minutes). 
 
 
 `kubectl delete deploy -l user=a123456`{{execute}}
@@ -34,7 +34,7 @@ Now let's try deleting the deployment (allow up to 5 minutes).
 > _"deployment.apps "a123456-deployment" deleted"_
 
 
-And check what is happening to the Pods
+And we can watch the progress of what is happening to the resources.
 
 `watch kubectl get all -l user=a123456`{{execute}}
 
