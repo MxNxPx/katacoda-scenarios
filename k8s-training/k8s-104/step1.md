@@ -10,6 +10,7 @@
 
 ![Terminal Time Remaining](./assets/term-expire.png)
 
+---
 
 ## Lab Overview
 
