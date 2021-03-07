@@ -10,37 +10,30 @@ That means that if a Pod dies that is part of a Deployment, Kubernetes will stan
 
 ---
 
-## Setting Context
+## Preparing a YAML file for Kubernetes
 
-We know since this is a sandboxed environment, the cluster will be "default". If this were a local machine, we would have to ensure we're pointed to the proper cluster before applying the YML file to our Kubernetes cluster with the command below. 
+YAML files are very particular about spacing. Always use the spaces to indent and never use tabs.
 
-
-Step 1:
-`kubectl config current-context
-`{{execute}}
+`cat deployment.yaml`{execute}}
 
 
 ## Pushing a Deployment 
 
-Now, we must apply the deployment.yaml file
+Now, we let's apply the deployment.yaml file
 
-Step 2:
-`kubectl apply -f deployment.yaml
-`{{execute}}
+`kubectl apply -f deployment.yaml`{{execute}}
 
-deployment.apps/a123456-deployment created
+> _"deployment.apps/a123456-deployment created"_
+
 
 To ensure that the deployment was created, run the command below.
 
-Step 3:
-`kubectl get deployments
-`{{execute}}
+`kubectl get deployments`{{execute}}
 
-Let's now check the status of the deployment with the command below. 
 
-Step 4:
-`kubectl get all -l user=a123456
-`{{execute}}
+Let's now check the status of the deployment and pods with the command below. 
+
+`kubectl get all -l user=a123456`{{execute}}
 
 
 Please Note: In our example we're going to use user=a123456, but in your use case, you'd use whatever is appropriate.
@@ -49,21 +42,19 @@ Please Note: In our example we're going to use user=a123456, but in your use cas
 
 Notice that there is something called a ReplicaSet. Under the hood, a Deployment actually creates a ReplicaSet, which is responsible for maintaining the number of replicas for the Pod that you specified in your Deployment.
 
-
-Find your output! Use kubectl logs and then the name of your pod to see the output.
-
 ![](./assets/K8-Deployments.png)
 
 
 ---
 
-Step 5:
-`kubectl -n default logs deployment/a123456-deployment --tail=10
-`{{execute}}
+You can use the kubectl logs command to view stdout (standard output) and stderr (standard error - error messages or diagnostics) from Pods.
 
-"Hello world!" Should be displayed
+`kubectl -n default logs deployment/a123456-deployment --tail=10`{{execute}}
 
-Congrats! Your first Kubernetes Pod is live!
+> _"Hello world!"_
+
+
+Congrats! Your first Kubernetes Deployment is live!
 
 kubectl logs is a command that views the stdout (standard output) and stderr (standard error - outputs error messages or diagnostics) from Pods.
 
@@ -72,13 +63,11 @@ Now let's delete a single pod and see what happens.
 Pod deletion takes time, so please allow up to 5 minutes. 
 
 
-Step 6:
-`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})
-`{{execute}}
+`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
 
 Deleting a pod will take some time to delete, so please be patient. 
 
-pod "a123456-deployment-xxxx-xxxx" deleted
+> _"pod "a123456-deployment-xxxx-xxxx" deleted"_
 
 Notice that the pod name is different from the one before, this means that Kubernetes deployed a new pod when the pod gets deleted.
 

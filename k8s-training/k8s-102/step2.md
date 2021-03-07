@@ -1,12 +1,31 @@
-## Kubernetes 102
-
 ---
 
 ## Kubernetes CLI - kubectl
 
 ---
 
-## kubectl plugins
+
+The primary CLI for interacting with Kubernetes is kubectl.
+
+
+## kubectl warm up
+
+Check to make sure kubectl is available and operational
+
+`kubectl version`{{execute}}
+
+`kubectl cluster-info`{{execute}}
+
+
+Check to make sure kubectl is pointing to the desired cluster / context
+
+`kubectl config view --minify`{{execute}}
+
+`kubectl config current-context`{{execute}}
+
+
+
+## kubectl plugins via krew
 
 Let's install a kubectl plugin manager called krew
 
@@ -30,11 +49,13 @@ Let's install some kubectl plugins
 
 `kubectl krew install whoami ctx ns`{{execute}}
 
-> _“namespace/sandbox created”_
+
+## kubectl plugin example
 
 
 Run a kubectl command using one of the plugins
 
-`kubectl krew whoami;echo`{{execute}}
+`kubectl whoami; echo`{{execute}}
 
 > _"kubecfg:basicauth:admin"_
+

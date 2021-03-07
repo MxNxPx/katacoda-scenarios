@@ -1,18 +1,24 @@
-## Kubernetes 102
+## Working with Namespaces
 
 ---
 
-## Namespace Creation
-
 Namespaces are a Kubernetes logical construct used for separating Kubernetes resources.
 
-`kubectl config current-context`{{execute}}
-> “default”
+
+Let's see which namespace kubectl is configured to operate in using the "ns" krew plugin
+
+`kubectl ns -c`{{execute}}
+
+> _“default”_
+
+
+Create a new namespace
 
 `kubectl create ns sandbox`{{execute}}
-> “namespace/sandbox created”
+
+> _“namespace/sandbox created”_
 
 
-The command below will list the current namespaces in a cluster. 
+Execute the command below to list the namespaces in the cluster
 
 `kubectl get namespace`{{execute}}
