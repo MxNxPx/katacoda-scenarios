@@ -8,54 +8,32 @@ Now that we have a web server running and a service bound to it, we are able to 
 
 ---
 
+Let's re-run the command to list the details of our deployed resources by label.
 
-`kubectl run -n default -i --restart=Never --rm curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-service-a123456.default.svc.cluster.local"`{{execute}}
-
-> _"Welcome to nginx!"_
-
----
-
-## Command Explanation of Deploying the Pod and Curling the Service from Within the Pod
-
--i : interactive, keeps STDIN (standard input) open even if not attached
-
---restart=Never : creates a Pod by default if generator flag was not specified
-
---rm : deletes resources created after executing
-
-curl-test : name of the Pod to be spun up
-
---generator=run-pod/v1 : generate resources based on a set of inputs and is used to pin a particular behavior which may change in the future
-
---image=radial/busyboxplus:curl : this curl image was created as an alternate for those only needing to use curl to extract their configuration in their Hub containers.
-
--- sh : shelling into the new Pod
-
--c : "curl -vvv hello-service-a123456": -c means to run the command that is within the "" in the Pod.
-
--vvv : very verbose output, displays extra information
-
+`kubectl get deploy,svc,po,ep -o wide -l user=a123456`{{execute}}
 
 ---
 
-## Port Forwarding
+Now we will delete a single pod.
 
-Port Forward the nginx Pod to localhost:80
+Deleting a pod will take some time to delete, so please be patient. 
 
-`kubectl port-forward $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name}) --address 0.0.0.0 8080:80`{{execute}}
-> _"Forwarding from 0.0.0.0:8080 -> 80 Forwarding from [::1]:80 -> 80"_
+`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
 
-Navigate to the dashboard tab, to the right of the terminal tab and enter "8080" as the port number. Then select "Display Port" and a "Welcome to nginx" screen should appear. Note that if you delete your Pod, a new one will be deployed by your Deployment, but you will have to re-run the kubectl port-forward command as your pod is now under a different name. 
+> _"pod "hello-web-a123456-xxxx-xxxx" deleted"_
 
+---
 
-## Cleanup
+Once again, let's run the command after the pod is deleted.
 
-Once finished, stop the port forward 
+`kubectl get deploy,svc,po,ep -o wide -l user=a123456`{{execute}}
 
-`^C`{{execute ctrl-seq}}
+---
 
+## Note
 
-Lastly, remove the service and the deployment with the below command:
-`kubectl delete svc,deploy -l user=a123456`{{execute}}
+Notice the following:
+- a new Pod was spun up to replace the deleted one
+- the Pod was assigned a new IP
+- the Service End Points were updated to include the new pod details
 
-> _"deployment.apps "hello-web-a123456" deleted"_

@@ -1,6 +1,6 @@
 ---
 
-## Service Communication
+## Service Interworkings
 
 ---
 
@@ -9,7 +9,7 @@ Now that we have a web server running and a service bound to it, we are able to 
 ---
 
 
-`kubectl run -n default -i --restart=Never --rm curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-service-a123456.default.svc.cluster.local"`{{execute}}
+`kubectl run -n default -i --restart=Never --rm curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-web-service-a123456.default.svc.cluster.local"`{{execute}}
 
 > _"Welcome to nginx!"_
 
