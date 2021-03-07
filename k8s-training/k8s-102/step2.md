@@ -10,14 +10,14 @@ The primary CLI for interacting with Kubernetes is kubectl.
 
 ## kubectl warm up
 
-Check to make sure kubectl is available and operational
+Let's check to make sure the kubectl cli is available and operational.
 
 `kubectl version`{{execute}}
 
 `kubectl cluster-info`{{execute}}
 
 
-Check to make sure kubectl is pointing to the desired cluster / context
+Also it is good proactice to make sure kubectl is pointing to the desired cluster / context before running commands.
 
 `kubectl config view --minify`{{execute}}
 
@@ -28,7 +28,7 @@ Check to make sure kubectl is pointing to the desired cluster / context
 
 ## kubectl plugins via krew
 
-Let's install a kubectl plugin manager called krew
+Let's install a kubectl plugin manager called krew.
 
 ```
 (
@@ -46,7 +46,7 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 > _"Installed plugin: krew"_
 
 
-Let's install some kubectl plugins
+Let's install some kubectl plugins.
 
 `kubectl krew install whoami ctx ns`{{execute}}
 
@@ -56,7 +56,7 @@ Let's install some kubectl plugins
 ## kubectl plugin example
 
 
-Run a kubectl command using one of the plugins
+Now, run a kubectl command using one of the plugins
 
 `kubectl whoami; echo`{{execute}}
 
