@@ -32,7 +32,7 @@ Once again, let's run the command after the pod is deleted.
 
 ## Note
 
-Notice the following:
+Did you pick up on the following...
 - a new Pod was spun up to replace the deleted one
 - the Pod was assigned a new IP
 - the Service End Points were updated to include the new pod details

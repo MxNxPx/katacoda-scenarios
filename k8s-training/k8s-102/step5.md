@@ -14,7 +14,7 @@ Deleting a pod will take some time to delete, so please be patient.
 
 `kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
 
-> _"pod "a123456-deployment-xxxx-xxxx" deleted"_
+> _"pod "a123456-hello-xxxx-xxxx" deleted"_
 
 
 ---
@@ -31,9 +31,11 @@ Notice that the new pod name is different from the one deleted.  This is because
 Now let's delete the deployment (allow up to 5 minutes). 
 
 
+`kubectl delete -f hello-deploy.yaml`{{execute}}
+-OR-
 `kubectl delete deploy -l user=a123456`{{execute}}
 
-> _"deployment.apps "a123456-deployment" deleted"_
+> _"deployment.apps "a123456-hello" deleted"_
 
 
 And we can watch the progress of what is happening to the resources.

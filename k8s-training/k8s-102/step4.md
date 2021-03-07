@@ -26,7 +26,7 @@ Now, we let's apply the hello-deploy.yaml file.
 
 `kubectl apply -f hello-deploy.yaml`{{execute}}
 
-> _"deployment.apps/a123456-deployment created"_
+> _"deployment.apps/a123456-hello created"_
 
 
 Let's check the status of the deployment and pods with the command below. 

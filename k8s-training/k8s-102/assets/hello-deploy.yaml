@@ -1,7 +1,7 @@
 apiVersion: apps/v1 # would need to change according to what is current
 kind: Deployment # the kind of Kubernetes object we are creating
 metadata:
-  name: a123456-deployment #name of the deployment
+  name: a123456-hello #name of the deployment
   labels:
     user: a123456
 spec:
