@@ -12,7 +12,7 @@ That means that if a Pod dies that is part of a Deployment, Kubernetes will stan
 
 YAML files are very particular about spacing. Always use the spaces to indent and never use tabs.
 
-`cat deployment.yaml`{execute}}
+`cat deployment.yaml`{{execute}}
 
 ---
 
