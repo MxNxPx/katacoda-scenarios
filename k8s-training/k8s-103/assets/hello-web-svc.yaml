@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name:  hello-web-service-a123456
   labels:
-    user: hello-web-service-a123456
+    user: a123456
 spec:
   selector:
     user: a123456

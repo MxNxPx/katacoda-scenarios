@@ -20,7 +20,7 @@ Let's review the file called hello-web-deploy.yaml.
 
 Now apply it to the cluster.
 
-`kubectl apply -f hello-web-deploy.yml`{{execute}}
+`kubectl apply -f hello-web-deploy.yaml`{{execute}}
 
 > _"deployment.extensions/hello-web-a123456 created”_
 
@@ -36,7 +36,7 @@ Let's review the file called hello-web-svc.yaml.
 
 Now apply it to the the cluster.
 
-`kubectl apply -f hello-web-svc.yml`{{execute}}
+`kubectl apply -f hello-web-svc.yaml`{{execute}}
 
 > _“service/hello-web-service-a123456 created”_
 
@@ -44,9 +44,10 @@ Now apply it to the the cluster.
 
 ## Validate the Service
 
-Lastly, run the below command to list all services, deployments and pods with the label 'user=a123456'. 
+Lastly, run the below command to list deployments, services, pods, and endpoints with the label 'user=a123456' (with some detail using '-o wide'). 
 
-`kubectl get svc,deploy,po -l user=a123456`{{execute}}
+`kubectl get deploy,svc,po,ep -l user=a123456 -o wide`{{execute}}
+
 
 ---
 
