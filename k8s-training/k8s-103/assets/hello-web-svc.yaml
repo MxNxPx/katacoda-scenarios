@@ -1,9 +1,9 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  hello-service-a123456
+  name:  hello-web-service-a123456
   labels:
-    user: hello-service-a123456
+    user: hello-web-service-a123456
 spec:
   selector:
     user: a123456

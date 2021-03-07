@@ -14,17 +14,17 @@ That means that if a Pod dies that is part of a Deployment, Kubernetes will stan
 
 YAML files are very particular about spacing. Always use the spaces to indent and never use tabs.
 
-Review the contents of the file deployment.yaml, which we will be using here in the next step.
+Review the contents of the file hello-deploy.yaml, which we will be using here in the next step.
 
-`cat deployment.yaml; echo;echo`{{execute}}
+`cat hello-deploy.yaml; echo;echo`{{execute}}
 
 ---
 
 ## Pushing a Deployment 
 
-Now, we let's apply the deployment.yaml file.
+Now, we let's apply the hello-deploy.yaml file.
 
-`kubectl apply -f deployment.yaml`{{execute}}
+`kubectl apply -f hello-deploy.yaml`{{execute}}
 
 > _"deployment.apps/a123456-deployment created"_
 

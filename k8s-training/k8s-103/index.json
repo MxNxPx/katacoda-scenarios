@@ -1,24 +1,28 @@
 {
     "noindex": true,
-    "title": "Kubernetes 103: Kubernetes Services",
+    "title": "Kubernetes 103",
     "description": "Kubernetes Services",
     "time": "10-20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Kubernetes Services",
-                "text": "K8 103 Section 1.md",
+                "title": "Step 1",
+                "text": "step1.md",
                 "code": "foreground.sh"
             },
             {
-                "title": "Accessing a Service",
-                "text": "K8 103 Section 2.md"
+                "title": "Step 2",
+                "text": "step2.md"
+            },
+            {
+                "title": "Step 3",
+                "text": "step3.md"
             }
         ],
         "assets": {
             "host01": [
                 {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "*.yml", "target": "/root", "chmod": "+r"}
+                {"file": "*.yaml", "target": "/root", "chmod": "+r"}
             ]
         },
         "intro": {
