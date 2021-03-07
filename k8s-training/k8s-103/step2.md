@@ -51,6 +51,8 @@ Lastly, run the below command to list deployments, services, pods, and endpoints
 
 ---
 
-## Note 
+## Notes
 
-In our service.yml, we did not specify a Type for our Service.  Kubernetes automatically assigned it a Type of ClusterIP and gave it a cluster internal IP address over the port that we declared.  A ClusterIP is NOT addressable directly from outside the cluster.
+Observe that the service endpoints map to the running Pod IPs and the desired service port.
+
+Also, we did not specify a 'Type' for our Service in the yaml file.  Kubernetes automatically defaults to assigning it a Type of 'ClusterIP' and gave it a cluster internal IP address over the port that we declared.  An important detail to know about the Service Type ClusterIP, is that the Service will NOT be addressable directly from outside the cluster.
