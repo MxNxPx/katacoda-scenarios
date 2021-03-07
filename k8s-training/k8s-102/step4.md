@@ -1,5 +1,3 @@
-## Kubernetes 102, Section 4: Applying the YML File
-
 ---
 
 ## Deployments
@@ -16,6 +14,7 @@ YAML files are very particular about spacing. Always use the spaces to indent an
 
 `cat deployment.yaml`{execute}}
 
+---
 
 ## Pushing a Deployment 
 
@@ -36,16 +35,18 @@ Let's now check the status of the deployment and pods with the command below.
 `kubectl get all -l user=a123456`{{execute}}
 
 
-Please Note: In our example we're going to use user=a123456, but in your use case, you'd use whatever is appropriate.
+NOTE: In our example we are using a label 'user=a123456' (defined in our yaml) to get all resources associated with the deployment
 
 ---
 
-Notice that there is something called a ReplicaSet. Under the hood, a Deployment actually creates a ReplicaSet, which is responsible for maintaining the number of replicas for the Pod that you specified in your Deployment.
+Notice that there is something called a **ReplicaSet**. Under the hood, a Deployment actually creates a ReplicaSet, which is responsible for maintaining the number of Pod replicas you specified in your Deployment.
 
-![](./assets/K8-Deployments.png)
+![Kubernetes Deployments](./assets/k8s-deployments.png)
 
 
 ---
+
+## Kubernetes Logs
 
 You can use the kubectl logs command to view stdout (standard output) and stderr (standard error - error messages or diagnostics) from Pods.
 
@@ -55,52 +56,3 @@ You can use the kubectl logs command to view stdout (standard output) and stderr
 
 
 Congrats! Your first Kubernetes Deployment is live!
-
-kubectl logs is a command that views the stdout (standard output) and stderr (standard error - outputs error messages or diagnostics) from Pods.
-
-Now let's delete a single pod and see what happens.
-
-Pod deletion takes time, so please allow up to 5 minutes. 
-
-
-`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
-
-Deleting a pod will take some time to delete, so please be patient. 
-
-> _"pod "a123456-deployment-xxxx-xxxx" deleted"_
-
-Notice that the pod name is different from the one before, this means that Kubernetes deployed a new pod when the pod gets deleted.
-
----
-
-Now let's see everything created under the label "user=a123456". 
-
-Step 7:
-`kubectl get all -l user=a123456
-`{{execute}}
-
-Now let's try deleting the deployment (allow up to 5 minutes). 
-
-
-Step 8:
-`kubectl delete deploy -l user=a123456
-`{{execute}}
-
-deployment.apps "a123456-deployment" deleted
-And check what is happening to the Pods
-
-
-Step 9:
-`kubectl get all -l user=a123456
-`{{execute}}
-
----
-
-Lastly, run the command again and see what happens. After a few moments (allow up to 5 minutes), all Pods tied to the Deployment will be deleted.
-
-
-Step 10: 
-`kubectl get all -l user=a123456
-`{{execute}}
-
-"No resources found" should be displayed. 

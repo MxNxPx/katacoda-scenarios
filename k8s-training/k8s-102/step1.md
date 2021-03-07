@@ -22,7 +22,8 @@ Commands will look like this (click the line to execute the command):
 
 `echo Hello`{{execute}}
 
-Expected output will look like this
+
+Expected output will look like this:
 
 > _"Hello"_
 

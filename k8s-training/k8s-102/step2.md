@@ -24,6 +24,7 @@ Check to make sure kubectl is pointing to the desired cluster / context
 `kubectl config current-context`{{execute}}
 
 
+---
 
 ## kubectl plugins via krew
 
@@ -49,6 +50,8 @@ Let's install some kubectl plugins
 
 `kubectl krew install whoami ctx ns`{{execute}}
 
+
+---
 
 ## kubectl plugin example
 
