@@ -8,7 +8,7 @@ metadata:
   labels:
     user: a123456
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       user: a123456
