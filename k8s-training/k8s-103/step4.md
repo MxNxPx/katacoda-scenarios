@@ -4,10 +4,11 @@
 
 ---
 
-Now that we have a web server running and a service bound to it, we are able to access it from within the Kubernetes cluster.  We can test this by deploying a new Pod in the cluster that uses the curl command to communicate via DNS entry for the service.
+Now that we have a web server running and a service bound to it, we are able to access it from within the Kubernetes cluster.  We can test this by deploying a new Pod in the cluster that uses the curl command to communicate via DNS entry for the service.  Altough we cannot directly talk to our Service from outside the cluster, we will utilize a Kubernetes port-forward feature to bridge the communication and test our webapp with a browser.
 
 ---
 
+## Run a Pod to test communication to our Service
 
 `kubectl run -n default -i --restart=Never --rm curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-web-service-a123456.default.svc.cluster.local"`{{execute}}
 
@@ -50,6 +51,7 @@ Navigate to the **Dashboard** tab, to the right of the terminal tab and enter "8
 Instead of the **Dashboard** tab you could also navigate to this page:
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
+---
 
 ## Cleanup
 
@@ -62,3 +64,7 @@ Lastly, remove the service and the deployment with the below command:
 `kubectl delete svc,deploy -l user=a123456`{{execute}}
 
 > _"deployment.apps "hello-web-a123456" deleted"_
+
+
+## That's all for this lab!!!
+
