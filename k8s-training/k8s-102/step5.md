@@ -2,6 +2,8 @@
 
 ## Deployments (again)
 
+---
+
 Kubernetes is going to always try to maintain the "desired state" provided by the user to the system.
 
 ---

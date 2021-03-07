@@ -1,4 +1,8 @@
+---
+
 ## Working with Namespaces
+
+---
 
 Namespaces are a Kubernetes logical construct used for separating Kubernetes resources.  When using kubectl you can utilize the argument 'namespace' or the shorthand 'ns' to interact with namespaces.
 

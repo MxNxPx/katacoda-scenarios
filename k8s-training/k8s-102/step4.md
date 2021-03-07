@@ -2,6 +2,8 @@
 
 ## Deployments
 
+---
+
 A **Deployment** creates **Pods** and defines which container image(s) to use within a Pod, how many replicas of the Pods to maintain, and configuration options for the Pod.
 Kubernetes will maintain the health of the Pods deployed from the Deployment until the Deployment is deleted.
 That means that if a Pod dies that is part of a Deployment, Kubernetes will stand up a new Pod to return to the desired number of Pods (specified in the Deployment).
