@@ -18,23 +18,15 @@ Now that we have a web server running and a service bound to it, we are able to 
 
 ## Command Explanation of Deploying the Pod and Curling the Service from Within the Pod
 
--i : interactive, keeps STDIN (standard input) open even if not attached
-
---restart=Never : creates a Pod by default if generator flag was not specified
-
---rm : deletes resources created after executing
-
-curl-test : name of the Pod to be spun up
-
---generator=run-pod/v1 : generate resources based on a set of inputs and is used to pin a particular behavior which may change in the future
-
---image=radial/busyboxplus:curl : this curl image was created as an alternate for those only needing to use curl to extract their configuration in their Hub containers.
-
--- sh : shelling into the new Pod
-
--c : "curl -vvv hello-service-a123456": -c means to run the command that is within the "" in the Pod.
-
--vvv : very verbose output, displays extra information
+| Item                            | Purpose                                                                                              |
+|---------------------------------|------------------------------------------------------------------------------------------------------|
+| -i                              | interactive, keeps STDIN (standard input) open even if not attached                                  |
+| --restart=Never                 | creates a Pod by default if generator flag was not specified                                         |
+| --rm                            | deletes resources created after executing                                                            |
+| curl-test                       | name of the Pod to be spun up                                                                        |
+| --generator=run-pod/v1          | generate resources based on a set of inputs and is used to pin a particular behavior                 |
+| --image=radial/busyboxplus:curl | specify container image, a curl image was created as an alternate for those only needing to use curl |
+| -- sh -c                        | execute a shell within the container and run the command following "-c"                              |
 
 
 ---
