@@ -17,7 +17,7 @@ Confirm changes were made
 
 Now, apply the updated ConfigMap (and wait at least 4 minutes).
 
-`kubectl apply -f nginx-cm.yml; echo; printf "[*] wait for it... "; spin.sh sleep 180; echo;echo`{{execute}}
+`kubectl apply -f nginx-cm.yaml; echo; printf "[*] wait for it... "; spin.sh sleep 180; echo;echo`{{execute}}
 > _"configmap/nginx-index-a123456 configured"_
 
 It will take a few minutes for the changes to be applied.  Under the hood, nginx is monitoring the ConfigMap for changes.  If a change is applied to the ConfigMap, it will write the new index.html file.  All of this is done without a restart of the nginx Pod.
