@@ -13,7 +13,7 @@ Change the index.html page by editing your ConfigMap YAML, via vim. When you are
 
 Confirm changes were made
 
-`diff -W $(tput cols) --side-by-side --suppress-common-lines --color nginx-cm.yaml{.bak,}; echo;echo`{{execute}}
+`diff -W $(tput cols) --side-by-side  nginx-cm.yaml{.bak,}; echo;echo`{{execute}}
 
 Now, apply the updated ConfigMap (and wait at least 4 minutes).
 
