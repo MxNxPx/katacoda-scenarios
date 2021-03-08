@@ -4,9 +4,9 @@
 
 ---
 
-A ConfigMap is an API object used to store non-confidential data in key-value pairs. Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
+A ConfigMap is an API object used to store non-confidential data in key-value pairs.  Pods can consume ConfigMaps as environment variables, command-line arguments, or as configuration files in a volume.
 
-A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable.
+A ConfigMap allows you to decouple environment-specific configuration from your container images, so that your applications are easily portable and reusable.
 
 ![ConfigMap](./assets/kubernetes-configmap.png)
 
@@ -41,6 +41,5 @@ Let's apply the YAML and wait for it to be available.
 Now let's test to confirm whether the ConfigMap data is being used by nginx.
 
 `kubectl run -n default -i --rm --restart=Never curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-service-a123456.default.svc.cluster.local"`{{execute}}
-
 > _"Hello User!"_
 
