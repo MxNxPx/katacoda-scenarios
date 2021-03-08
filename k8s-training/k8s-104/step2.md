@@ -26,9 +26,11 @@ Deploy the ConfigMap.
 
 ## Referencing the ConfigMap
 
-Now we will review and deploy a yaml file with a Deployment and Service.  This will reference the configmap in your deployment and deploy the service.
+Review the contents of the yaml spec that will use the ConfigMap.
 
 `cat hello-web-deploy-svc.yaml; echo;echo`{{execute}}
+
+Let's apply the YAML and wait for it to be available.
 
 `kubectl apply -f hello-web-deploy-svc.yaml; kubectl -n default wait deploy/hello-web-a123456 --for=condition=available --timeout=120s`{{execute}}
 
@@ -36,8 +38,9 @@ Now we will review and deploy a yaml file with a Deployment and Service.  This w
 
 ## Confirm the ConfigMap was loaded
 
-Test connectivity to nginx: Please note, if the pod fails to connect, wait for about 2 minutes. 
+Now let's test to confirm whether the ConfigMap data is being used by nginx.
+
 `kubectl run -n default -i --rm --restart=Never curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-service-a123456.default.svc.cluster.local"`{{execute}}
 
-> _"pod "curl-test" deleted"_
+> _"Hello User!"_
 
