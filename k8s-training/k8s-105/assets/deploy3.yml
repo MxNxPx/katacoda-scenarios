@@ -24,16 +24,13 @@ spec:
           - name: "TOMCAT_PASSWORD" # env variable for tomcat container
             valueFrom:
               secretKeyRef: # reference a secret
-                name: tomcat-pass-a123456 # name of the secret for the
-#tomcat username we defined
+                name: tomcat-pass-a123456 # name of the secret for the tomcat username we defined
                 key: "TOMCAT_PASSWORD" # value to extract from the secret
           - name: "TOMCAT_USERNAME" # env variable for tomcat container
             valueFrom:
               secretKeyRef: # reference a secret
-                name: tomcat-user-a123456 # name of the secret for the tomcat
-#password we defined
-                key: "TOMCAT_USERNAME" # value to extract from the
-#secret#define a service for tomcat deployment
+                name: tomcat-user-a123456 # name of the secret for the tomcat password we defined
+                key: "TOMCAT_USERNAME" # value to extract from the secret#define a service for tomcat deployment
 ---
 kind: Service
 apiVersion: v1
@@ -48,5 +45,4 @@ spec:
   ports:
     - name: http
       port: 80 # port the service will open on
-      targetPort: 8080 # port the Pod is listening on (reference containerPort
-#in the deployment)
+      targetPort: 8080 # port the Pod is listening on (reference containerPort in the deployment)

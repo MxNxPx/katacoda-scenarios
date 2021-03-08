@@ -6,23 +6,27 @@
     "details": {
         "steps": [
             {
-                "title": "Creating Secrets",
-                "text": "K8 105 Section 2.md",
+                "title": "Step 1",
+                "text": "step1.md",
                 "code": "foreground.sh"
             },
             {
-                "title": "Referencing Secrets",
-                "text": "K8 105 Section 3.md"
+                "title": "Step 2",
+                "text": "step2.md"
             },
             {
-                "title": "Test Logging in to Tomcat Manager UI",
-                "text": "K8 105 Section 4.md"
+                "title": "Step 3",
+                "text": "step3.md"
+            },
+            {
+                "title": "Step 4",
+                "text": "step4.md"
             }
         ],
         "assets": {
             "host01": [
                 {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "*.yml", "target": "/root", "chmod": "+r"}
+                {"file": "*.yaml", "target": "/root", "chmod": "+r"}
             ]
         },
         "intro": {
