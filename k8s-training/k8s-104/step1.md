@@ -17,6 +17,7 @@
 In this lab, we are going to:
 - Deploy a **ConfigMap**
 - Utilize the **ConfigMap** in a **Deployment**
+- Update the **ConfigMap** 
 
 Commands will look like this (click the line to execute the command):
 
