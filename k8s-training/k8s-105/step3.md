@@ -5,13 +5,13 @@
 ---
 
 
-The deploy3.yml file contains Apache tomcat deployment information and the secrets from secret.yml. 
+The tomcat-deploy-svc.yaml file contains Apache tomcat deployment information and the secrets from secret.yml. 
 
-Display the contents of deploy3.yml.
+Display the contents of tomcat-deploy-svc.yaml.
 
-`cat deploy3.yml; echo;echo`{{execute}}
+`cat tomcat-deploy-svc.yaml; echo;echo`{{execute}}
 
 
 Now, apply the Deployment and the Service:
 
-`kubectl apply -f deploy3.yml`{{execute}}
+`kubectl apply -f tomcat-deploy-svc.yaml`{{execute}}

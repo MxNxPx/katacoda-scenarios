@@ -14,13 +14,13 @@ A Secret is an object that contains a small amount of sensitive data such as a p
 
 ## Encoding Secrets
 
-In this scenario, we're going to be encoding the username and password of the secret.yml file. 
+In this scenario, we're going to be encoding the username and password of the tomcat-secrets.yaml file. 
 
 By default, Kubernetes requires data stored in Secrets to be base64 encoded. The base64 command encodes and decodes data, which is what we're going to be using it for in this scenario.  
 
 Step 1:
-Display the contents of secret.yml. 
-`cat secret.yml; echo;echo`{{execute}}
+Display the contents of tomcat-secrets.yaml. 
+`cat tomcat-secrets.yaml; echo;echo`{{execute}}
 
 Step 2:
 Ecnode the username:
@@ -36,4 +36,4 @@ Notice how the username and password match the output.
 
 Step 4:
 Apply the Secrets:
-`kubectl apply -f secret.yml`{{execute}}
+`kubectl apply -f tomcat-secrets.yaml`{{execute}}
