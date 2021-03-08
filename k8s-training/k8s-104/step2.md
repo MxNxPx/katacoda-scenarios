@@ -16,7 +16,7 @@ A ConfigMap allows you to decouple environment-specific configuration from your 
 
 Display the contents of nginx-cm.yaml to see what's inside.
 
-`cat nginx-cm.yaml`{{execute}}
+`cat nginx-cm.yaml; echo;echo`{{execute}}
 
 Deploy the ConfigMap.
 
@@ -28,7 +28,7 @@ Deploy the ConfigMap.
 
 Now we will review and deploy a yaml file with a Deployment and Service.  This will reference the configmap in your deployment and deploy the service.
 
-`cat hello-web-deploy-svc.yaml`{{execute}}
+`cat hello-web-deploy-svc.yaml; echo;echo`{{execute}}
 
 `kubectl apply -f hello-web-deploy-svc.yaml; kubectl -n default wait deploy/hello-web-a123456 --for=condition=available --timeout=120s`{{execute}}
 
