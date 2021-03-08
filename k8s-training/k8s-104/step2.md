@@ -22,6 +22,7 @@ Deploy the ConfigMap.
 
 `kubectl apply -f nginx-cm.yaml`{{execute}}
 > _"configmap/nginx-index-a123456 created"_
+
 ---
 
 ## Referencing the ConfigMap
@@ -34,6 +35,7 @@ Let's apply the YAML and wait for it to be available.
 
 `kubectl apply -f hello-web-deploy-svc.yaml; kubectl -n default wait deploy/hello-web-a123456 --for=condition=available --timeout=120s`{{execute}}
 > _"deployment.apps/hello-web-a123456 condition met"_
+
 ---
 
 ## Confirm the ConfigMap was loaded
