@@ -33,6 +33,8 @@ Reivew the YAML to confirm.
 
 ---
 
+## Deploying the Secrets
+
 Now let's create the Secret.
 
 `kubectl apply -f tomcat-secrets.yaml`{{execute}}
