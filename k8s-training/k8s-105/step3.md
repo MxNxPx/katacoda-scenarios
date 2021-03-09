@@ -5,13 +5,14 @@
 ---
 
 
-The tomcat-deploy-svc.yaml file contains Apache tomcat deployment information and the secrets from secret.yml. 
+Now let's define an Apache tomcat deployment that will utilize the secrets we just created.
 
-Display the contents of tomcat-deploy-svc.yaml.
+Take a look at the contents of tomcat-deploy-svc.yaml we will be deploying.
 
 `cat tomcat-deploy-svc.yaml; echo;echo`{{execute}}
 
 
-Now, apply the Deployment and the Service:
+Now, apply the Deployment and the Service and wait for it to be available:
 
-`kubectl apply -f tomcat-deploy-svc.yaml`{{execute}}
+`kubectl apply -f tomcat-deploy-svc.yaml; kubectl -n default wait deploy/tomcat-a123456 --for=condition=available --timeout=120s`{{execute}}
+> _"deployment.apps/tomcat-a123456 condition met"_
