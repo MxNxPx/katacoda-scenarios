@@ -37,4 +37,5 @@ Now let's create the Secret.
 
 `kubectl apply -f tomcat-secrets.yaml`{{execute}}
 > _"secret/tomcat-user-a123456 created"_
+
 > _"secret/tomcat-pass-a123456 created"_
