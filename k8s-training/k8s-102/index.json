@@ -1,7 +1,7 @@
 {
     "noindex": true,
     "title": "Kubernetes 102",
-    "description": "Kubernetes: Creating and Applying the YML file",
+    "description": "Kubernetes: CLI, Namespaces, Deployments",
     "time": "10-20 minutes",
     "details": {
         "steps": [

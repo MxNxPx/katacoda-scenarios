@@ -1,7 +1,7 @@
 {
     "noindex": true,
-    "title": "Kubernetes 105: Creating and Referencing Secrets ",
-    "description": "Creating and Referencing Secrets",
+    "title": "Kubernetes 105",
+    "description": "Kubernetes: Secrets",
     "time": "10-20 minutes",
     "details": {
         "steps": [
