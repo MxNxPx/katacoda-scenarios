@@ -53,7 +53,7 @@ Before checking the logs, we will confirm that the Deployment is healthy.
 
 You can use the kubectl logs command to view stdout (standard output) and stderr (standard error - error messages or diagnostics) from Pods.
 
-`kubectl -n default logs deployment/a123456-deployment --tail=10`{{execute}}
+`kubectl -n default logs deployment/a123456-hello --tail=10`{{execute}}
 
 > _"Hello world!"_
 
