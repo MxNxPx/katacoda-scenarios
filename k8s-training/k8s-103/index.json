@@ -3,6 +3,7 @@
     "title": "Kubernetes 103",
     "description": "Kubernetes: Services",
     "time": "10-20 minutes",
+    "icon": "fa-kubernetes",
     "details": {
         "steps": [
             {

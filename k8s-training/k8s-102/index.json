@@ -3,6 +3,7 @@
     "title": "Kubernetes 102",
     "description": "Kubernetes: Deployments",
     "time": "10-20 minutes",
+    "icon": "fa-kubernetes",
     "details": {
         "steps": [
             {

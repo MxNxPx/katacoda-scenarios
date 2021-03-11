@@ -3,6 +3,7 @@
     "title": "Kubernetes 101",
     "description": "Kubernetes: CLI, Namespaces, Labels",
     "time": "10-20 minutes",
+    "icon": "fa-kubernetes",
     "details": {
         "steps": [
             {
