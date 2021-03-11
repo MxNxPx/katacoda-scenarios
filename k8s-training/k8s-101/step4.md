@@ -42,12 +42,12 @@ Let's confirm the Labels are now present.
 
 Let's display only the Namespaces which have the createdby=user label present.
 
-`kubectl get ns -l createdby=user --show-labels`{{execute}
+`kubectl get ns -l createdby=user --show-labels`{{execute}}
 
 
 Now display only the Namespaces which have Labels createdby=cluster and purpose=mgmt present.
 
-`kubectl get ns -l createdby=cluster,purpose=mgmt --show-labels`{{execute}
+`kubectl get ns -l createdby=cluster,purpose=mgmt --show-labels`{{execute}}
 
 ---
 
