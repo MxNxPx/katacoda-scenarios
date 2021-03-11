@@ -29,6 +29,7 @@ The below command does the same thing as the command above, but also passes in t
 
 An HTTP status code of 200 shows that we successfully accessed the page
 
+---
 
 ## That's all for this lab!!!
 

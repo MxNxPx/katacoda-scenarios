@@ -34,5 +34,7 @@ After waiting, use another pod to confirm the changes were applied.
 `kubectl run -n default -i --rm --restart=Never curl-test --generator=run-pod/v1 --image=radial/busyboxplus:curl -- sh -c "curl -vvv hello-service-a123456.default.svc.cluster.local"`{{execute}}
 > _"Hello Everyone!"_
 
+---
+
 ## That's all for this lab!!!
 
