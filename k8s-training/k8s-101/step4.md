@@ -28,7 +28,6 @@ kubectl label ns ns3 createdby=user purpose=testing
 kubectl label ns kube-system createdby=cluster purpose=mgmt
 kubectl label ns kube-node-lease createdby=cluster purpose=mgmt
 kubectl label ns kube-public createdby=cluster purpose=services
-kubectl get nodes --show-labels
 ```{{execute}}
 > _"namespace/xxxx labeled"_
 
