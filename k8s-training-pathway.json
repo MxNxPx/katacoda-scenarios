@@ -6,27 +6,27 @@
       {
         "course_id": "k8s-101",
         "title": "Kubernetes-101",
-        "description": "Kubernetes Components"
+        "description": "Kubernetes: CLI, Namespaces, Labels"
       },
       {
         "course_id": "k8s-102",
         "title": "Kubernetes 102",
-        "description": "Creating and Applying the YML file"
+        "description": "Kubernetes: Deployments"
       },
       {
         "course_id": "k8s-103",
         "title": "Kubernetes 103",
-        "description": "Kubernetes Services"
+        "description": "Kubernetes: Services"
       },
       {
         "course_id": "k8s-104",
         "title": "Kubernetes-104",
-        "description": "Creating, Referencing, and Editing a ConfigMap "
+        "description": "Kubernetes: ConfigMaps"
       },
       {
         "course_id": "k8s-105",
         "title": "Kubernetes 105",
-        "description": "Creating and Referencing Secrets"
+        "description": "Kubernetes: Secrets"
       },
       {
         "course_id": "k8s-quiz",
