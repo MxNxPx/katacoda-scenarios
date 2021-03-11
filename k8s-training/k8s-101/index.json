@@ -1,66 +1,28 @@
 {
     "noindex": true,
-    "title": "Kubernetes 101 Quiz",
-    "description": "Kubernetes Components",
-    "time": "15-20 minutes",
+    "title": "Kubernetes 101",
+    "description": "Kubernetes: CLI, Namespaces, Labels",
+    "time": "10-20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Section 1: Kubernetes Components",
+                "title": "Step 1",
                 "text": "step1.md",
-                "answer": "step1-answers.md",
                 "code": "foreground.sh"
             },
             {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step2.md",
-                "answer": "step2-answers.md"
+                "title": "Step 2",
+                "text": "step2.md"
             },
             {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step3.md",
-                "answer": "step3-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step4.md",
-                "answer": "step4-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step5.md",
-                "answer": "step5-answers.md"
-            },
-                        {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step1-2.md",
-                "answer": "step1-2-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step2-2.md",
-                "answer": "step2-2-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step3-2.md",
-                "answer": "step3-2-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step4-2.md",
-                "answer": "step4-2-answers.md"
-            },
-            {
-                "title": "Section 1: Kubernetes Components",
-                "text": "step5-2.md",
-                "answer": "step5-2-answers.md"
+                "title": "Step 3",
+                "text": "step3.md"
             }
         ],
         "assets": {
             "host01": [
                 {"file": "*.sh", "target": "/usr/local/bin/", "chmod": "+x"},
-                {"file": "*.y*ml", "target": "/root", "chmod": "+r"}
+                {"file": "*.yaml", "target": "/root", "chmod": "+r"}
             ]
         },
         "intro": {

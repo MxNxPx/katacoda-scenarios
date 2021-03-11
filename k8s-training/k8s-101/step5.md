@@ -1,17 +1,62 @@
-## Question (5/10)
+---
 
-Note: All questions are mandatory. Once completed, click on the 'Check Answers' button to validate and continue to the next question.
+## Deployments (again)
 
 ---
 
-As mentioned, your application is deployed on a Worker Node within a K8s cluster. Kubelet is a process that exists on each Worker Node that listens to the API Server for Pods to be scheduled. A Worker Node can have any given number of Pods scheduled on it, which are scheduled by the API server. The Kubelet can also monitor the health of each Pod on the Node it resides on.
+Kubernetes is going to always try to maintain the "desired state" provided by the user to the system.
 
 ---
-Watch the below video and answer the question. 
 
-https://www.youtube.com/watch?v=PH-2FfFD2PU
+Let's delete a single pod and see what happens.
 
->>Q5: After losing a worker, what Kubernetes component would make a decision on where to instantiate it? << 
-() API server
-(*) Scheduler
-() engine-eh-ks
+Deleting a pod will take some time to delete, so please be patient. 
+
+`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
+
+> _"pod "a123456-hello-xxxx-xxxx" deleted"_
+
+
+---
+
+Now let's see re-list all resources that have the label "user=a123456". 
+
+`kubectl get all -l user=a123456`{{execute}}
+
+
+Notice that the new pod name is different from the one deleted.  This is because Kubernetes didn't resurrect the old pod but instead stood up a new replacement pod.
+
+---
+
+Now let's delete the deployment (allow up to 5 minutes). 
+
+
+`kubectl delete -f hello-deploy.yaml`{{execute}}
+-OR-
+`kubectl delete deploy -l user=a123456`{{execute}}
+
+> _"deployment.apps "a123456-hello" deleted"_
+
+
+And we can watch the progress of what is happening to the resources.
+
+`watch kubectl get all -l user=a123456`{{execute}}
+
+
+CTRL+c to stop watching the progress
+
+`^C`{{execute ctrl-seq}}
+
+---
+
+Lastly, run the command again and see what happens. After a few moments (allow up to 5 minutes), all Pods tied to the Deployment will be deleted.
+
+
+`kubectl get all -l user=a123456`{{execute}}
+
+> _"No resources found"_
+
+---
+
+## That's all for this lab!!!
+

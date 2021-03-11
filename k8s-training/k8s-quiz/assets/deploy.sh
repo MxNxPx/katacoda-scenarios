@@ -7,22 +7,24 @@
 
 ## packages (ex: kubectl httpie termdown)
 apt-get update \
-&& apt-get install -y httpie
-#&& apt-get install -y apt-transport-https \
-#&& curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
-#&& echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list \
-#&& apt-get update \
-#&& apt-get install -y kubectl httpie
-#&& apt-get install -y httpie
+&& apt-get install -y apt-transport-https \
+&& curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add - \
+&& echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list \
+&& apt-get update \
+&& apt-get install -y kubectl httpie
 
-pip install termdown
+#pip install termdown
 
-## install k3s and start cluster
-curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="v1.18" sh -
+### install k3s and start cluster
+#curl -sfL https://get.k3s.io | INSTALL_K3S_CHANNEL="v1.18" sh -
+#kubectl rollout status -n kube-system deployment/coredns \
+#&& kubectl rollout status -n kube-system deployment/local-path-provisioner
+#export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+## install kind
+GO111MODULE="on" go get sigs.k8s.io/kind@v0.9.0 && kind create cluster --config /root/kind-config.yaml
 kubectl rollout status -n kube-system deployment/coredns \
-&& kubectl rollout status -n kube-system deployment/local-path-provisioner
-
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+&& kubectl rollout status -n kube-system pod/kube-apiserver-kind-control-plane
 
 cat <<'EOF' >>/root/.bash_profile
 source /root/.bashrc

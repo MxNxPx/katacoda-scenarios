@@ -1,7 +1,7 @@
 {
     "noindex": true,
     "title": "Kubernetes 102",
-    "description": "Kubernetes: CLI, Namespaces, Deployments",
+    "description": "Kubernetes: Deployments",
     "time": "10-20 minutes",
     "details": {
         "steps": [
@@ -17,14 +17,6 @@
             {
                 "title": "Step 3",
                 "text": "step3.md"
-            },
-            {
-                "title": "Step 4",
-                "text": "step4.md"
-            },
-            {
-                "title": "Step 5",
-                "text": "step5.md"
             }
         ],
         "assets": {

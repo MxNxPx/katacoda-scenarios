@@ -15,9 +15,8 @@
 ## Lab Overview
 
 In this lab, we are going to:
-- Utilize the **kubectl** CLI to interact with our Kubernetes cluster 
-- Create a Kubernetes **Namespace**
 - Run an application by implementing a **Deployment**
+- Test Kubernetes **Deployment** self-healing
 
 Commands will look like this (click the line to execute the command):
 

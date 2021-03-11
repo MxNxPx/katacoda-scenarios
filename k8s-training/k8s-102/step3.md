@@ -1,62 +1,62 @@
 ---
 
-## Working with Namespaces
+## Deployments (again)
 
 ---
 
-Namespaces are a Kubernetes logical construct used for separating Kubernetes resources.  When using kubectl you can utilize the argument 'namespace' or the shorthand 'ns' to interact with namespaces.
+Kubernetes is going to always try to maintain the "desired state" provided by the user to the system.
 
 ---
 
-## Namespace Basics
+Let's delete a single pod and see what happens.
 
+Deleting a pod will take some time to delete, so please be patient. 
 
-Let's see which namespace kubectl is configured to operate in using the "ns" krew plugin.
+`kubectl delete pod $(kubectl get pod --selector="user"="a123456" -o jsonpath={.items[0]..metadata.name})`{{execute}}
 
-`kubectl ns -c`{{execute}}
+> _"pod "a123456-hello-xxxx-xxxx" deleted"_
 
-> _“default”_
 
 ---
 
-## Creating and Listing Namespaces
+Now let's see re-list all resources that have the label "user=a123456". 
 
-Let's use kubectl to create a new namespace.
-
-
-`kubectl create ns sandbox`{{execute}}
-
-> _“namespace/sandbox created”_
+`kubectl get all -l user=a123456`{{execute}}
 
 
-Execute the command below to list all namespaces in the cluster.
-
-`kubectl get ns`{{execute}}
+Notice that the new pod name is different from the one deleted.  This is because Kubernetes didn't resurrect the old pod but instead stood up a new replacement pod.
 
 ---
 
-## Namespace scoping
+Now let's delete the deployment (allow up to 5 minutes). 
 
-When running commands you can either specify the namespace (in order of precedence):
-- the YAML definition file of a resource being implemented
-- the kubectl commandline using '-n NAMESPACE_NAME' or '--namespace NAMESPACE_NAME'
-- automatically via the namespace in the context being used
 
-Let's update our context to use the 'sandbox' namespace and see what resources are present.
+`kubectl delete -f hello-deploy.yaml`{{execute}}
+-OR-
+`kubectl delete deploy -l user=a123456`{{execute}}
 
-`kubectl ns sandbox`{{execute}}
-> _"Active namespace is "sandbox"."_
+> _"deployment.apps "a123456-hello" deleted"_
 
-`kubectl get all`{{execute}}
-> _"No resources found in sandbox namespace."_
 
-Let's return our context to use the 'default' namespace.
+And we can watch the progress of what is happening to the resources.
 
-`kubectl ns default`{{execute}}
-> _"Active namespace is "default"."_
+`watch kubectl get all -l user=a123456`{{execute}}
 
-Let's see what is running under another namespace using the '-n' flag.
 
-`kubectl get all -n kube-system`{{execute}}
+CTRL+c to stop watching the progress
 
+`^C`{{execute ctrl-seq}}
+
+---
+
+Lastly, run the command again and see what happens. After a few moments (allow up to 5 minutes), all Pods tied to the Deployment will be deleted.
+
+
+`kubectl get all -l user=a123456`{{execute}}
+
+> _"No resources found"_
+
+---
+
+## That's all for this lab!!!
 

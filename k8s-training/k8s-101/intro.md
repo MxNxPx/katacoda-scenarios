@@ -1,3 +1,3 @@
-
-Wait for the environment to be ready before proceeding (should be < 5 mins)
+The lab environment takes a few minutes to start.
+Once started, follow the provided instructions.
 
