@@ -5,33 +5,38 @@
     "courses": [
       {
         "course_id": "k8s-101",
-        "title": "Kubernetes-101 Quiz",
+        "title": "Kubernetes-101",
         "description": "Kubernetes Components"
       },
       {
         "course_id": "k8s-102",
-        "title": "Kubernetes 102: Creating and Applying the YML file",
+        "title": "Kubernetes 102",
         "description": "Creating and Applying the YML file"
       },
       {
         "course_id": "k8s-103",
-        "title": "Kubernetes 103: Kubernetes Services",
+        "title": "Kubernetes 103",
         "description": "Kubernetes Services"
       },
       {
         "course_id": "k8s-104",
-        "title": "Kubernetes-104: Creating, Referencing, and Editing a ConfigMap",
+        "title": "Kubernetes-104",
         "description": "Creating, Referencing, and Editing a ConfigMap "
       },
       {
         "course_id": "k8s-105",
-        "title": "Kubernetes 105: Creating and Referencing Secrets",
+        "title": "Kubernetes 105",
         "description": "Creating and Referencing Secrets"
+      },
+      {
+        "course_id": "k8s-quiz",
+        "title": "Kubernetes Quiz",
+        "description": "Intro to Containers, Docker and Kurbernetes Quiz"
       },
       {
         "course_id": "k8s-201",
         "title": "Kubernetes-201 Quiz",
-        "description": "Intro to Containers, Docker and Kurbernetes Quiz"
+        "description": "Advanced Containers, Docker and Kurbernetes Quiz"
       }
     ]
   }
