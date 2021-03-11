@@ -30,7 +30,7 @@ kubectl label ns kube-node-lease createdby=cluster purpose=mgmt
 kubectl label ns kube-public createdby=cluster purpose=services
 kubectl get nodes --show-labels
 ```{{execute}}
-> _"namespace/ns3 labeled"_
+> _"namespace/xxxx labeled"_
 
 
 Let's confirm the Labels are now present.
