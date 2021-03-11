@@ -1,6 +1,6 @@
 {
-    "title": "Kubernetes Introductory Training",
-    "description": "Kubernetes Training for Beginners",
+    "title": "Kubernetes",
+    "description": "Kubernetes Introductory Training",
     "icon": "fa-kubernetes",
     "courses": [
       {
@@ -27,16 +27,6 @@
         "course_id": "k8s-105",
         "title": "Kubernetes 105",
         "description": "Kubernetes: Secrets"
-      },
-      {
-        "course_id": "k8s-quiz",
-        "title": "Kubernetes Quiz",
-        "description": "Intro to Containers, Docker and Kurbernetes Quiz"
-      },
-      {
-        "course_id": "k8s-201",
-        "title": "Kubernetes-201 Quiz",
-        "description": "Advanced Containers, Docker and Kurbernetes Quiz"
       }
     ]
   }
