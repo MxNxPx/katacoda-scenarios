@@ -49,7 +49,7 @@
         "uilayout": "terminal-iframe"
     },
     "backend": {
-        "imageid": "ubuntu",
+        "imageid": "kubernetes-kubeadm-1node",
         "port": "8080"
     }
 }
